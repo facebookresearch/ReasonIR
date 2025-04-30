@@ -1,0 +1,21 @@
+name: naive_rag
+
+
+dataset_name: gpqa
+split: diamond
+subset_num: null
+
+model_path: ???
+llm_endpoint: ???
+search_llm_endpoint: None
+temperature: 0.7
+top_p: 0.8
+repetition_penalty: 1.0
+max_tokens: 10000  # make sure max_tokens + max_doc_len < max_model_context_length
+
+
+workflow_type: naive_rag
+top_k: 3
+max_doc_len: 10000
+search_engine: offline_massiveds
+use_query_rewriting: false

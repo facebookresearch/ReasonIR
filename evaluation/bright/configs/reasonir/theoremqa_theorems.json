@@ -1,0 +1,6 @@
+{
+  "instructions": {
+    "query": "<|user|>\nGiven a Math problem, retrieve relevant theorems that help answer the problem\n<|embed|>\n",
+    "document": "<|embed|>\n"
+  }
+}

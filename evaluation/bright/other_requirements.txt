@@ -1,0 +1,5 @@
+cohere==4.36
+voyageai
+vertexai
+openai
+gritlm
