@@ -77,6 +77,9 @@ Please refer to the instructions in `training`.
 }
 ```
 
+## License
+Please refer to LICENSE for more information.
+
 ## Acknowledgments
 We thank the following great open-source repositories:
 - [BRIGHT](https://github.com/xlang-ai/BRIGHT)
