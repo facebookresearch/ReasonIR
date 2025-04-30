@@ -78,7 +78,7 @@ Please refer to the instructions in `training`.
 ```
 
 ## License
-Please refer to LICENSE for more information.
+ReasonIR is Creative Commons Attribution-NonCommercial 4.0 International licensed, as found in the LICENSE file.
 
 ## Acknowledgments
 We thank the following great open-source repositories:
