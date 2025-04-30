@@ -3,9 +3,10 @@
 ReasonIR-8B is the first retriever specifically trained for general reasoning tasks, achieving the state-of-the-art retrieval performance on BRIGHT (reasoning-intensive retrieval). 
 When employed for retrieval-augmented generation (RAG), ReasonIR-8B also brings substantial gains on MMLU and GPQA.
 
-- Model: https://huggingface.co/reasonir/ReasonIR-8B 
+- Model: https://huggingface.co/reasonir/ReasonIR-8B
+- Data: https://huggingface.co/datasets/reasonir/reasonir-data 
 - Paper: https://arxiv.org/abs/2504.20595
-- Data: coming soon
+
 
 ## General Usage
 Make sure to install `transformers>=4.47.0` first!
