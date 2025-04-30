@@ -5,6 +5,7 @@ When employed for retrieval-augmented generation (RAG), ReasonIR-8B also brings 
 
 - Model: https://huggingface.co/reasonir/ReasonIR-8B 
 - Paper: https://arxiv.org/abs/2504.20595
+- Data: coming soon
 
 ## General Usage
 Make sure to install `transformers>=4.47.0` first!
