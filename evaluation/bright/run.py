@@ -39,6 +39,7 @@ if __name__=='__main__':
     parser.add_argument('--no_log', action='store_true', help="Disable logging to Google Sheets.")
     parser.add_argument('--sweep_output_dir', type=str, default=None)
     parser.add_argument('--skip_doc_emb', action='store_true', help="Skip document embedding.")
+    parser.add_argument('--store_all_scores', action='store_true', help="The default is to store the top 1000 scores. This option will store all scores.")
     args = parser.parse_args()
     if args.model_id is None:
         args.output_dir = os.path.join(args.output_dir,f"{args.task}_{args.model}_long_{args.long_context}")
@@ -162,6 +163,8 @@ if __name__=='__main__':
             kwargs.update({'ignore_cache': args.ignore_cache})
         if args.skip_doc_emb:
             kwargs.update({'skip_doc_emb': args.skip_doc_emb})
+        if args.store_all_scores:
+            kwargs.update({'store_all_scores': args.store_all_scores})
         model_id = args.model_id if args.model_id is not None else args.model
         scores = RETRIEVAL_FUNCS[args.model](queries=queries,query_ids=query_ids,documents=documents,excluded_ids=excluded_ids,
                                              instructions=config['instructions_long'] if args.long_context else config['instructions'],

@@ -228,6 +228,7 @@ def retrieval_bm25(queries,query_ids,documents,doc_ids,excluded_ids,long_context
     from gensim.corpora import Dictionary
     from gensim.models import LuceneBM25Model
     from gensim.similarities import SparseMatrixSimilarity
+    store_all_score = kwargs.get('store_all_scores', False)
     analyzer = analysis.Analyzer(analysis.get_lucene_analyzer())
     corpus = [analyzer.analyze(x) for x in documents]
     dictionary = Dictionary(corpus)
@@ -248,7 +249,10 @@ def retrieval_bm25(queries,query_ids,documents,doc_ids,excluded_ids,long_context
         for did in set(excluded_ids[str(query_id)]):
             if did!="N/A":
                 all_scores[str(query_id)].pop(did)
-        cur_scores = sorted(all_scores[str(query_id)].items(),key=lambda x:x[1],reverse=True)[:1000]
+        if store_all_score:
+            cur_scores = sorted(all_scores[str(query_id)].items(),key=lambda x:x[1],reverse=True)
+        else:
+            cur_scores = sorted(all_scores[str(query_id)].items(),key=lambda x:x[1],reverse=True)[:1000]
         all_scores[str(query_id)] = {}
         for pair in cur_scores:
             all_scores[str(query_id)][pair[0]] = pair[1]

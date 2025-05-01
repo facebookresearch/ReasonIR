@@ -8,9 +8,11 @@ torchmetrics
 pyserini
 gensim
 einops
-vllm==0.6.3
+vllm
 fasttext
 nltk
+sentence-transformers
+hf_transfer
 # cohere==4.36
 # voyageai
 # vertexai
