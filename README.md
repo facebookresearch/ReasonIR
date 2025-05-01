@@ -3,9 +3,9 @@
 ReasonIR-8B is the first retriever specifically trained for general reasoning tasks, achieving the state-of-the-art retrieval performance on BRIGHT (reasoning-intensive retrieval). 
 When employed for retrieval-augmented generation (RAG), ReasonIR-8B also brings substantial gains on MMLU and GPQA.
 
+- Paper: https://arxiv.org/abs/2504.20595
 - Model: https://huggingface.co/reasonir/ReasonIR-8B
 - Data: https://huggingface.co/datasets/reasonir/reasonir-data 
-- Paper: https://arxiv.org/abs/2504.20595
 
 
 ## General Usage
@@ -57,16 +57,16 @@ It is important to also include `trust_remote_code=True` and `torch_dtype="auto"
 NOTE: there seems to be some very slight floating point discrepancy when using the SentenceTransformer (because it does not support bf16 precision), though it should not affect the results in general.
 
 ## Evaluations
-Please refer to the instructions in `evaluation`.
+Please refer to the instructions in [`evaluation/`](https://github.com/facebookresearch/ReasonIR/tree/main/evaluation).
 
 ## Synthetic Data Generation
-Please refer to the instructions in `synthetic_data_generation`.
+Please refer to the instructions in [`synthetic_data_generation/`](https://github.com/facebookresearch/ReasonIR/tree/main/synthetic_data_generation).
 
 ## Test Time Scaling Techniques
-Please refer to the instructions in `test_time_techniques`.
+Please refer to the instructions in [`test_time_techniques/`](https://github.com/facebookresearch/ReasonIR/tree/main/test_time_techniques).
 
 ## Retriever Training
-Please refer to the instructions in `training`.
+Please refer to the instructions in [`training/`](https://github.com/facebookresearch/ReasonIR/tree/main/training).
 
 ## Citation
 ```
