@@ -13,6 +13,12 @@ pip install -r evaluation/bright/requirements.txt
 bash synthetic_data_generation/setup_java.sh
 ```
 
+To run BM25, you need to install java:
+```bash
+wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb
+sudo dpkg -i
+```
+
 To evaluate ReasonIR on BRIGHT, run
 ```bash
 bash evaluation/bright/script.sh
