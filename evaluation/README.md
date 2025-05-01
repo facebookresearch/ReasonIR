@@ -10,11 +10,8 @@ Setup (same as for synthetic data generation):
 conda create -n reasonir python=3.10
 conda activate reasonir
 pip install -r evaluation/bright/requirements.txt
-bash synthetic_data_generation/setup_java.sh
-```
 
-To run BM25, you need to install java:
-```bash
+# to evaluate with BM25, you need to download java
 wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb
 sudo dpkg -i
 ```
@@ -23,6 +20,13 @@ To evaluate ReasonIR on BRIGHT, run
 ```bash
 bash evaluation/bright/script.sh
 ```
+
+To evaluate ReasonIR on BRIGHT with a reranker (QwenRerank), run
+```bash
+bash evaluation/bright/reranker_script.sh
+```
+Note that this script first runs the retriever and then the reranker. This script produces two results files –reranker_results.json and reranker_retriever_results.json. The former is the results obtained using just the reranker scores and the later is results obtained when the reranker score are interpolated with the retriever scors.
+If you want to combine the reranker scores with BM25 scores, look at the comments in reranker_script.sh for instructions. 
 
 To reproduce the results for some other baselines (such as Cohere and Voyage embeddings), please install other required packages via `pip install evaluation/bright/other_requirements.txt`.
 
