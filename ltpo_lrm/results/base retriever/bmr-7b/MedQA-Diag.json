@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "28.25 minutes",
+  "model_name": "bmr-7b",
+  "test": {
+    "map_at_1": 0.03858,
+    "map_at_10": 0.11167,
+    "map_at_100": 0.13079,
+    "map_at_3": 0.07937,
+    "map_at_5": 0.09253,
+    "ndcg_at_1": 0.15254,
+    "ndcg_at_10": 0.16949,
+    "ndcg_at_100": 0.24956,
+    "ndcg_at_3": 0.14051,
+    "ndcg_at_5": 0.1404,
+    "precision_at_1": 0.15254,
+    "precision_at_10": 0.07966,
+    "precision_at_100": 0.0189,
+    "precision_at_3": 0.12429,
+    "precision_at_5": 0.09831,
+    "recall_at_1": 0.03858,
+    "recall_at_10": 0.20954,
+    "recall_at_100": 0.47821,
+    "recall_at_3": 0.10123,
+    "recall_at_5": 0.13973
+  }
+}

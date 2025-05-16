@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Biology",
+  "evaluation_time": "10.65 minutes",
+  "model_name": "grit",
+  "test": {
+    "map_at_1": 0.08386,
+    "map_at_10": 0.18091,
+    "map_at_100": 0.20962,
+    "map_at_3": 0.13005,
+    "map_at_5": 0.15542,
+    "ndcg_at_1": 0.2233,
+    "ndcg_at_10": 0.24991,
+    "ndcg_at_100": 0.34287,
+    "ndcg_at_3": 0.20017,
+    "ndcg_at_5": 0.21791,
+    "precision_at_1": 0.2233,
+    "precision_at_10": 0.10971,
+    "precision_at_100": 0.02369,
+    "precision_at_3": 0.16181,
+    "precision_at_5": 0.14369,
+    "recall_at_1": 0.08386,
+    "recall_at_10": 0.29837,
+    "recall_at_100": 0.61062,
+    "recall_at_3": 0.15444,
+    "recall_at_5": 0.21427
+  }
+}

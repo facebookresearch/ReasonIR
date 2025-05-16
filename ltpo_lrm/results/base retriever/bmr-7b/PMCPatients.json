@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMCPatients",
+  "evaluation_time": "62.11 minutes",
+  "model_name": "bmr-7b",
+  "test": {
+    "map_at_1": 0.11696,
+    "map_at_10": 0.21795,
+    "map_at_100": 0.23816,
+    "map_at_3": 0.17995,
+    "map_at_5": 0.20348,
+    "ndcg_at_1": 0.23684,
+    "ndcg_at_10": 0.29141,
+    "ndcg_at_100": 0.37421,
+    "ndcg_at_3": 0.22633,
+    "ndcg_at_5": 0.26078,
+    "precision_at_1": 0.23684,
+    "precision_at_10": 0.08158,
+    "precision_at_100": 0.01518,
+    "precision_at_3": 0.15789,
+    "precision_at_5": 0.12632,
+    "recall_at_1": 0.11696,
+    "recall_at_10": 0.37573,
+    "recall_at_100": 0.70468,
+    "recall_at_3": 0.23099,
+    "recall_at_5": 0.30336
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "1.36 minutes",
+  "model_name": "bmr-410m",
+  "test": {
+    "map_at_1": 0.00856,
+    "map_at_10": 0.03968,
+    "map_at_100": 0.04801,
+    "map_at_3": 0.02333,
+    "map_at_5": 0.03362,
+    "ndcg_at_1": 0.04237,
+    "ndcg_at_10": 0.06275,
+    "ndcg_at_100": 0.11184,
+    "ndcg_at_3": 0.04816,
+    "ndcg_at_5": 0.05193,
+    "precision_at_1": 0.04237,
+    "precision_at_10": 0.03305,
+    "precision_at_100": 0.00992,
+    "precision_at_3": 0.04802,
+    "precision_at_5": 0.04576,
+    "recall_at_1": 0.00856,
+    "recall_at_10": 0.08013,
+    "recall_at_100": 0.24771,
+    "recall_at_3": 0.03265,
+    "recall_at_5": 0.05293
+  }
+}

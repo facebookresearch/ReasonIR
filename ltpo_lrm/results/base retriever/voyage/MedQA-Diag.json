@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "13.98 minutes",
+  "model_name": "voyage",
+  "test": {
+    "map_at_1": 0.01915,
+    "map_at_10": 0.05894,
+    "map_at_100": 0.07421,
+    "map_at_3": 0.03455,
+    "map_at_5": 0.04997,
+    "ndcg_at_1": 0.0678,
+    "ndcg_at_10": 0.09356,
+    "ndcg_at_100": 0.17002,
+    "ndcg_at_3": 0.06549,
+    "ndcg_at_5": 0.07876,
+    "precision_at_1": 0.0678,
+    "precision_at_10": 0.04407,
+    "precision_at_100": 0.01483,
+    "precision_at_3": 0.05932,
+    "precision_at_5": 0.06102,
+    "recall_at_1": 0.01915,
+    "recall_at_10": 0.12356,
+    "recall_at_100": 0.38518,
+    "recall_at_3": 0.04592,
+    "recall_at_5": 0.08775
+  }
+}

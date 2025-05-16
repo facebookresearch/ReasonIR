@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYiPatients-EN",
+  "evaluation_time": "21.03 minutes",
+  "model_name": "grit",
+  "test": {
+    "map_at_1": 0.07132,
+    "map_at_10": 0.16041,
+    "map_at_100": 0.20089,
+    "map_at_3": 0.11421,
+    "map_at_5": 0.13436,
+    "ndcg_at_1": 0.2093,
+    "ndcg_at_10": 0.24944,
+    "ndcg_at_100": 0.38261,
+    "ndcg_at_3": 0.19134,
+    "ndcg_at_5": 0.20495,
+    "precision_at_1": 0.2093,
+    "precision_at_10": 0.11008,
+    "precision_at_100": 0.02705,
+    "precision_at_3": 0.16279,
+    "precision_at_5": 0.14729,
+    "recall_at_1": 0.07132,
+    "recall_at_10": 0.31796,
+    "recall_at_100": 0.74587,
+    "recall_at_3": 0.15426,
+    "recall_at_5": 0.21473
+  }
+}

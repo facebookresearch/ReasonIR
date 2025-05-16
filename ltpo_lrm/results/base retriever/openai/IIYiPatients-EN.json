@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYiPatients-EN",
+  "evaluation_time": "27.19 minutes",
+  "model_name": "openai",
+  "test": {
+    "map_at_1": 0.04729,
+    "map_at_10": 0.10337,
+    "map_at_100": 0.13833,
+    "map_at_3": 0.07308,
+    "map_at_5": 0.08683,
+    "ndcg_at_1": 0.13953,
+    "ndcg_at_10": 0.1712,
+    "ndcg_at_100": 0.30925,
+    "ndcg_at_3": 0.12285,
+    "ndcg_at_5": 0.13577,
+    "precision_at_1": 0.13953,
+    "precision_at_10": 0.07364,
+    "precision_at_100": 0.02481,
+    "precision_at_3": 0.10078,
+    "precision_at_5": 0.09302,
+    "recall_at_1": 0.04729,
+    "recall_at_10": 0.22946,
+    "recall_at_100": 0.6969,
+    "recall_at_3": 0.09729,
+    "recall_at_5": 0.14419
+  }
+}

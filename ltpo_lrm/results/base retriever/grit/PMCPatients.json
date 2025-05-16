@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMCPatients",
+  "evaluation_time": "56.64 minutes",
+  "model_name": "grit",
+  "test": {
+    "map_at_1": 0.16447,
+    "map_at_10": 0.2926,
+    "map_at_100": 0.3119,
+    "map_at_3": 0.24537,
+    "map_at_5": 0.27384,
+    "ndcg_at_1": 0.30702,
+    "ndcg_at_10": 0.37075,
+    "ndcg_at_100": 0.44778,
+    "ndcg_at_3": 0.29168,
+    "ndcg_at_5": 0.33046,
+    "precision_at_1": 0.30702,
+    "precision_at_10": 0.09737,
+    "precision_at_100": 0.01632,
+    "precision_at_3": 0.19006,
+    "precision_at_5": 0.15088,
+    "recall_at_1": 0.16447,
+    "recall_at_10": 0.48099,
+    "recall_at_100": 0.77485,
+    "recall_at_3": 0.2924,
+    "recall_at_5": 0.38085
+  }
+}

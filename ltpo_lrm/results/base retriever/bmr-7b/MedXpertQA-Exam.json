@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedXpertQA-Exam",
+  "evaluation_time": "25.26 minutes",
+  "model_name": "bmr-7b",
+  "test": {
+    "map_at_1": 0.03927,
+    "map_at_10": 0.08034,
+    "map_at_100": 0.09451,
+    "map_at_3": 0.06917,
+    "map_at_5": 0.0733,
+    "ndcg_at_1": 0.07216,
+    "ndcg_at_10": 0.11548,
+    "ndcg_at_100": 0.18072,
+    "ndcg_at_3": 0.09583,
+    "ndcg_at_5": 0.10156,
+    "precision_at_1": 0.07216,
+    "precision_at_10": 0.03711,
+    "precision_at_100": 0.01021,
+    "precision_at_3": 0.06873,
+    "precision_at_5": 0.05361,
+    "recall_at_1": 0.03927,
+    "recall_at_10": 0.15407,
+    "recall_at_100": 0.39639,
+    "recall_at_3": 0.10225,
+    "recall_at_5": 0.11867
+  }
+}

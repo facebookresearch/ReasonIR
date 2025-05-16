@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Medical",
+  "evaluation_time": "0.03 minutes",
+  "model_name": "bge",
+  "test": {
+    "map_at_1": 0.11999,
+    "map_at_10": 0.29692,
+    "map_at_100": 0.31979,
+    "map_at_3": 0.22246,
+    "map_at_5": 0.26219,
+    "ndcg_at_1": 0.22727,
+    "ndcg_at_10": 0.40327,
+    "ndcg_at_100": 0.48343,
+    "ndcg_at_3": 0.30242,
+    "ndcg_at_5": 0.34546,
+    "precision_at_1": 0.22727,
+    "precision_at_10": 0.13409,
+    "precision_at_100": 0.02261,
+    "precision_at_3": 0.21212,
+    "precision_at_5": 0.18182,
+    "recall_at_1": 0.11999,
+    "recall_at_10": 0.57435,
+    "recall_at_100": 0.86159,
+    "recall_at_3": 0.32194,
+    "recall_at_5": 0.4286
+  }
+}

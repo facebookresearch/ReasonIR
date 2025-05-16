@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMCPatients",
+  "evaluation_time": "0.24 minutes",
+  "model_name": "nv",
+  "test": {
+    "map_at_1": 0.19956,
+    "map_at_10": 0.36558,
+    "map_at_100": 0.38257,
+    "map_at_3": 0.30677,
+    "map_at_5": 0.34614,
+    "ndcg_at_1": 0.34211,
+    "ndcg_at_10": 0.44702,
+    "ndcg_at_100": 0.50845,
+    "ndcg_at_3": 0.35887,
+    "ndcg_at_5": 0.40527,
+    "precision_at_1": 0.34211,
+    "precision_at_10": 0.11842,
+    "precision_at_100": 0.01728,
+    "precision_at_3": 0.24561,
+    "precision_at_5": 0.19123,
+    "recall_at_1": 0.19956,
+    "recall_at_10": 0.57675,
+    "recall_at_100": 0.80994,
+    "recall_at_3": 0.36257,
+    "recall_at_5": 0.47076
+  }
+}

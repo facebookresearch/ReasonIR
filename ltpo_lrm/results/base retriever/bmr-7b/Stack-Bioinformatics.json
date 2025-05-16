@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Bioinformatics",
+  "evaluation_time": "20.8 minutes",
+  "model_name": "bmr-7b",
+  "test": {
+    "map_at_1": 0.15478,
+    "map_at_10": 0.33762,
+    "map_at_100": 0.36539,
+    "map_at_3": 0.25588,
+    "map_at_5": 0.29919,
+    "ndcg_at_1": 0.2987,
+    "ndcg_at_10": 0.44014,
+    "ndcg_at_100": 0.52331,
+    "ndcg_at_3": 0.34396,
+    "ndcg_at_5": 0.38124,
+    "precision_at_1": 0.2987,
+    "precision_at_10": 0.14935,
+    "precision_at_100": 0.02481,
+    "precision_at_3": 0.24242,
+    "precision_at_5": 0.20519,
+    "recall_at_1": 0.15478,
+    "recall_at_10": 0.60328,
+    "recall_at_100": 0.88721,
+    "recall_at_3": 0.32678,
+    "recall_at_5": 0.44889
+  }
+}

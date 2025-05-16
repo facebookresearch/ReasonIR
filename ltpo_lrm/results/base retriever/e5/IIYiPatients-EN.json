@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYiPatients-EN",
+  "evaluation_time": "42.34 minutes",
+  "model_name": "e5",
+  "test": {
+    "map_at_1": 0.0531,
+    "map_at_10": 0.13974,
+    "map_at_100": 0.18719,
+    "map_at_3": 0.09332,
+    "map_at_5": 0.11242,
+    "ndcg_at_1": 0.15504,
+    "ndcg_at_10": 0.22926,
+    "ndcg_at_100": 0.37776,
+    "ndcg_at_3": 0.16017,
+    "ndcg_at_5": 0.17316,
+    "precision_at_1": 0.15504,
+    "precision_at_10": 0.10853,
+    "precision_at_100": 0.02791,
+    "precision_at_3": 0.13695,
+    "precision_at_5": 0.12558,
+    "recall_at_1": 0.0531,
+    "recall_at_10": 0.31486,
+    "recall_at_100": 0.78979,
+    "recall_at_3": 0.1292,
+    "recall_at_5": 0.18566
+  }
+}

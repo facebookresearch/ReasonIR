@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMCPatients",
+  "evaluation_time": "0.06 minutes",
+  "model_name": "bge",
+  "test": {
+    "map_at_1": 0.1864,
+    "map_at_10": 0.26635,
+    "map_at_100": 0.281,
+    "map_at_3": 0.23843,
+    "map_at_5": 0.25019,
+    "ndcg_at_1": 0.34211,
+    "ndcg_at_10": 0.32752,
+    "ndcg_at_100": 0.391,
+    "ndcg_at_3": 0.28772,
+    "ndcg_at_5": 0.29848,
+    "precision_at_1": 0.34211,
+    "precision_at_10": 0.07719,
+    "precision_at_100": 0.01333,
+    "precision_at_3": 0.17544,
+    "precision_at_5": 0.12105,
+    "recall_at_1": 0.1864,
+    "recall_at_10": 0.375,
+    "recall_at_100": 0.61988,
+    "recall_at_3": 0.27632,
+    "recall_at_5": 0.30482
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedXpertQA-Exam",
+  "evaluation_time": "14.36 minutes",
+  "model_name": "voyage",
+  "test": {
+    "map_at_1": 0.02587,
+    "map_at_10": 0.05321,
+    "map_at_100": 0.06059,
+    "map_at_3": 0.03824,
+    "map_at_5": 0.04245,
+    "ndcg_at_1": 0.06186,
+    "ndcg_at_10": 0.08744,
+    "ndcg_at_100": 0.1261,
+    "ndcg_at_3": 0.05335,
+    "ndcg_at_5": 0.05908,
+    "precision_at_1": 0.06186,
+    "precision_at_10": 0.03299,
+    "precision_at_100": 0.00773,
+    "precision_at_3": 0.0378,
+    "precision_at_5": 0.03299,
+    "recall_at_1": 0.02587,
+    "recall_at_10": 0.14254,
+    "recall_at_100": 0.28355,
+    "recall_at_3": 0.04855,
+    "recall_at_5": 0.06393
+  }
+}

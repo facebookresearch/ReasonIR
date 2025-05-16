@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedXpertQA-Exam",
+  "evaluation_time": "56.39 minutes",
+  "model_name": "openai",
+  "test": {
+    "map_at_1": 0.02793,
+    "map_at_10": 0.074,
+    "map_at_100": 0.08997,
+    "map_at_3": 0.05354,
+    "map_at_5": 0.06076,
+    "ndcg_at_1": 0.07216,
+    "ndcg_at_10": 0.1178,
+    "ndcg_at_100": 0.18891,
+    "ndcg_at_3": 0.0866,
+    "ndcg_at_5": 0.09221,
+    "precision_at_1": 0.07216,
+    "precision_at_10": 0.04639,
+    "precision_at_100": 0.01124,
+    "precision_at_3": 0.07216,
+    "precision_at_5": 0.05567,
+    "recall_at_1": 0.02793,
+    "recall_at_10": 0.17108,
+    "recall_at_100": 0.43816,
+    "recall_at_3": 0.08234,
+    "recall_at_5": 0.11069
+  }
+}

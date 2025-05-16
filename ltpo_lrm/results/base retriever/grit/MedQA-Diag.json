@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "25.06 minutes",
+  "model_name": "grit",
+  "test": {
+    "map_at_1": 0.06236,
+    "map_at_10": 0.13724,
+    "map_at_100": 0.16269,
+    "map_at_3": 0.10387,
+    "map_at_5": 0.11691,
+    "ndcg_at_1": 0.19492,
+    "ndcg_at_10": 0.19858,
+    "ndcg_at_100": 0.2928,
+    "ndcg_at_3": 0.17064,
+    "ndcg_at_5": 0.16743,
+    "precision_at_1": 0.19492,
+    "precision_at_10": 0.09068,
+    "precision_at_100": 0.0222,
+    "precision_at_3": 0.14124,
+    "precision_at_5": 0.11186,
+    "recall_at_1": 0.06236,
+    "recall_at_10": 0.22862,
+    "recall_at_100": 0.53522,
+    "recall_at_3": 0.12556,
+    "recall_at_5": 0.15652
+  }
+}

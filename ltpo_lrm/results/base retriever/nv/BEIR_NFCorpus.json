@@ -1,0 +1,27 @@
+{
+  "dataset_name": "BEIR_NFCorpus",
+  "evaluation_time": "3.04 minutes",
+  "model_name": "nv",
+  "test": {
+    "map_at_1": 0.07839,
+    "map_at_10": 0.17784,
+    "map_at_100": 0.23282,
+    "map_at_3": 0.12702,
+    "map_at_5": 0.15042,
+    "ndcg_at_1": 0.55418,
+    "ndcg_at_10": 0.44841,
+    "ndcg_at_100": 0.41964,
+    "ndcg_at_3": 0.49954,
+    "ndcg_at_5": 0.48128,
+    "precision_at_1": 0.56966,
+    "precision_at_10": 0.33158,
+    "precision_at_100": 0.1065,
+    "precision_at_3": 0.4644,
+    "precision_at_5": 0.41796,
+    "recall_at_1": 0.07839,
+    "recall_at_10": 0.22725,
+    "recall_at_100": 0.43663,
+    "recall_at_3": 0.14006,
+    "recall_at_5": 0.17645
+  }
+}

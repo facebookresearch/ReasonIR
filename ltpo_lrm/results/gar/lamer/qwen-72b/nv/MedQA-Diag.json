@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "0.19 minutes",
+  "model_name": "nv",
+  "test": {
+    "map_at_1": 0.06978,
+    "map_at_10": 0.2057,
+    "map_at_100": 0.23666,
+    "map_at_3": 0.14742,
+    "map_at_5": 0.17387,
+    "ndcg_at_1": 0.29661,
+    "ndcg_at_10": 0.28638,
+    "ndcg_at_100": 0.37939,
+    "ndcg_at_3": 0.2715,
+    "ndcg_at_5": 0.26098,
+    "precision_at_1": 0.29661,
+    "precision_at_10": 0.13898,
+    "precision_at_100": 0.02653,
+    "precision_at_3": 0.24576,
+    "precision_at_5": 0.19661,
+    "recall_at_1": 0.06978,
+    "recall_at_10": 0.32523,
+    "recall_at_100": 0.62378,
+    "recall_at_3": 0.18415,
+    "recall_at_5": 0.23206
+  }
+}

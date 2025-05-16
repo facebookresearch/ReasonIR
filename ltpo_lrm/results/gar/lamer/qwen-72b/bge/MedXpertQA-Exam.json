@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedXpertQA-Exam",
+  "evaluation_time": "0.05 minutes",
+  "model_name": "bge",
+  "test": {
+    "map_at_1": 0.04812,
+    "map_at_10": 0.11129,
+    "map_at_100": 0.12469,
+    "map_at_3": 0.10025,
+    "map_at_5": 0.1064,
+    "ndcg_at_1": 0.13402,
+    "ndcg_at_10": 0.1532,
+    "ndcg_at_100": 0.20914,
+    "ndcg_at_3": 0.14474,
+    "ndcg_at_5": 0.14432,
+    "precision_at_1": 0.13402,
+    "precision_at_10": 0.05155,
+    "precision_at_100": 0.01093,
+    "precision_at_3": 0.12027,
+    "precision_at_5": 0.08454,
+    "recall_at_1": 0.04812,
+    "recall_at_10": 0.18537,
+    "recall_at_100": 0.38659,
+    "recall_at_3": 0.13697,
+    "recall_at_5": 0.15795
+  }
+}

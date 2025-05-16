@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Medical",
+  "evaluation_time": "10.93 minutes",
+  "model_name": "grit",
+  "test": {
+    "map_at_1": 0.20012,
+    "map_at_10": 0.363,
+    "map_at_100": 0.39426,
+    "map_at_3": 0.30785,
+    "map_at_5": 0.32858,
+    "ndcg_at_1": 0.36364,
+    "ndcg_at_10": 0.4594,
+    "ndcg_at_100": 0.5497,
+    "ndcg_at_3": 0.39374,
+    "ndcg_at_5": 0.4057,
+    "precision_at_1": 0.36364,
+    "precision_at_10": 0.13864,
+    "precision_at_100": 0.02398,
+    "precision_at_3": 0.26136,
+    "precision_at_5": 0.18864,
+    "recall_at_1": 0.20012,
+    "recall_at_10": 0.5888,
+    "recall_at_100": 0.88339,
+    "recall_at_3": 0.38521,
+    "recall_at_5": 0.4471
+  }
+}

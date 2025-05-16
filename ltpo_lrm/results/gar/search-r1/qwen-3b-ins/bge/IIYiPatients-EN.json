@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYiPatients-EN",
+  "evaluation_time": "0.02 minutes",
+  "model_name": "bge",
+  "test": {
+    "map_at_1": 0.03824,
+    "map_at_10": 0.09741,
+    "map_at_100": 0.1271,
+    "map_at_3": 0.06798,
+    "map_at_5": 0.07881,
+    "ndcg_at_1": 0.14729,
+    "ndcg_at_10": 0.16158,
+    "ndcg_at_100": 0.27715,
+    "ndcg_at_3": 0.12285,
+    "ndcg_at_5": 0.12477,
+    "precision_at_1": 0.14729,
+    "precision_at_10": 0.07752,
+    "precision_at_100": 0.02147,
+    "precision_at_3": 0.1137,
+    "precision_at_5": 0.09457,
+    "recall_at_1": 0.03824,
+    "recall_at_10": 0.20543,
+    "recall_at_100": 0.59328,
+    "recall_at_3": 0.08398,
+    "recall_at_5": 0.11964
+  }
+}

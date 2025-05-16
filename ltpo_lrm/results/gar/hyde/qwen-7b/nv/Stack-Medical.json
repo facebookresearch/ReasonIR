@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Medical",
+  "evaluation_time": "0.19 minutes",
+  "model_name": "nv",
+  "test": {
+    "map_at_1": 0.20986,
+    "map_at_10": 0.39422,
+    "map_at_100": 0.42412,
+    "map_at_3": 0.31893,
+    "map_at_5": 0.35855,
+    "ndcg_at_1": 0.35227,
+    "ndcg_at_10": 0.49389,
+    "ndcg_at_100": 0.58165,
+    "ndcg_at_3": 0.40264,
+    "ndcg_at_5": 0.44098,
+    "precision_at_1": 0.35227,
+    "precision_at_10": 0.14773,
+    "precision_at_100": 0.02534,
+    "precision_at_3": 0.26136,
+    "precision_at_5": 0.21591,
+    "recall_at_1": 0.20986,
+    "recall_at_10": 0.64426,
+    "recall_at_100": 0.92848,
+    "recall_at_3": 0.39528,
+    "recall_at_5": 0.5049
+  }
+}

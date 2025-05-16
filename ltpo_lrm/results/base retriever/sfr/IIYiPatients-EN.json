@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYiPatients-EN",
+  "evaluation_time": "42.32 minutes",
+  "model_name": "sfr",
+  "test": {
+    "map_at_1": 0.05439,
+    "map_at_10": 0.14685,
+    "map_at_100": 0.19368,
+    "map_at_3": 0.09897,
+    "map_at_5": 0.11628,
+    "ndcg_at_1": 0.16279,
+    "ndcg_at_10": 0.23713,
+    "ndcg_at_100": 0.38532,
+    "ndcg_at_3": 0.17084,
+    "ndcg_at_5": 0.18029,
+    "precision_at_1": 0.16279,
+    "precision_at_10": 0.11163,
+    "precision_at_100": 0.02822,
+    "precision_at_3": 0.14729,
+    "precision_at_5": 0.12868,
+    "recall_at_1": 0.05439,
+    "recall_at_10": 0.31938,
+    "recall_at_100": 0.79677,
+    "recall_at_3": 0.13811,
+    "recall_at_5": 0.1907
+  }
+}

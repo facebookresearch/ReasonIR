@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "1.17 minutes",
+  "model_name": "bge",
+  "test": {
+    "map_at_1": 0.03347,
+    "map_at_10": 0.10364,
+    "map_at_100": 0.12107,
+    "map_at_3": 0.07394,
+    "map_at_5": 0.09113,
+    "ndcg_at_1": 0.09322,
+    "ndcg_at_10": 0.15047,
+    "ndcg_at_100": 0.21836,
+    "ndcg_at_3": 0.12514,
+    "ndcg_at_5": 0.13423,
+    "precision_at_1": 0.09322,
+    "precision_at_10": 0.06949,
+    "precision_at_100": 0.01653,
+    "precision_at_3": 0.11582,
+    "precision_at_5": 0.10339,
+    "recall_at_1": 0.03347,
+    "recall_at_10": 0.18784,
+    "recall_at_100": 0.40199,
+    "recall_at_3": 0.10389,
+    "recall_at_5": 0.14002
+  }
+}

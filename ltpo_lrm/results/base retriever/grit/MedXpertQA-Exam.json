@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedXpertQA-Exam",
+  "evaluation_time": "22.4 minutes",
+  "model_name": "grit",
+  "test": {
+    "map_at_1": 0.06625,
+    "map_at_10": 0.09039,
+    "map_at_100": 0.10436,
+    "map_at_3": 0.08297,
+    "map_at_5": 0.08439,
+    "ndcg_at_1": 0.1134,
+    "ndcg_at_10": 0.12316,
+    "ndcg_at_100": 0.19253,
+    "ndcg_at_3": 0.11121,
+    "ndcg_at_5": 0.10681,
+    "precision_at_1": 0.1134,
+    "precision_at_10": 0.03505,
+    "precision_at_100": 0.01124,
+    "precision_at_3": 0.07216,
+    "precision_at_5": 0.04742,
+    "recall_at_1": 0.06625,
+    "recall_at_10": 0.14737,
+    "recall_at_100": 0.40604,
+    "recall_at_3": 0.10054,
+    "recall_at_5": 0.10545
+  }
+}

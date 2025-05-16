@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Bioinformatics",
+  "evaluation_time": "0.04 minutes",
+  "model_name": "bge",
+  "test": {
+    "map_at_1": 0.15229,
+    "map_at_10": 0.24956,
+    "map_at_100": 0.27925,
+    "map_at_3": 0.19308,
+    "map_at_5": 0.22991,
+    "ndcg_at_1": 0.27273,
+    "ndcg_at_10": 0.32343,
+    "ndcg_at_100": 0.42889,
+    "ndcg_at_3": 0.26693,
+    "ndcg_at_5": 0.29702,
+    "precision_at_1": 0.27273,
+    "precision_at_10": 0.1039,
+    "precision_at_100": 0.02195,
+    "precision_at_3": 0.18182,
+    "precision_at_5": 0.15844,
+    "recall_at_1": 0.15229,
+    "recall_at_10": 0.40113,
+    "recall_at_100": 0.77519,
+    "recall_at_3": 0.23683,
+    "recall_at_5": 0.32515
+  }
+}

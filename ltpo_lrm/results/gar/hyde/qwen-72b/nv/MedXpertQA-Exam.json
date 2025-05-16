@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedXpertQA-Exam",
+  "evaluation_time": "0.31 minutes",
+  "model_name": "nv",
+  "test": {
+    "map_at_1": 0.0843,
+    "map_at_10": 0.14129,
+    "map_at_100": 0.15621,
+    "map_at_3": 0.11523,
+    "map_at_5": 0.13042,
+    "ndcg_at_1": 0.18557,
+    "ndcg_at_10": 0.18832,
+    "ndcg_at_100": 0.25054,
+    "ndcg_at_3": 0.15703,
+    "ndcg_at_5": 0.17018,
+    "precision_at_1": 0.18557,
+    "precision_at_10": 0.05979,
+    "precision_at_100": 0.01278,
+    "precision_at_3": 0.09966,
+    "precision_at_5": 0.08454,
+    "recall_at_1": 0.0843,
+    "recall_at_10": 0.22663,
+    "recall_at_100": 0.45652,
+    "recall_at_3": 0.13697,
+    "recall_at_5": 0.18303
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "43.78 minutes",
+  "model_name": "sfr",
+  "test": {
+    "map_at_1": 0.0438,
+    "map_at_10": 0.1171,
+    "map_at_100": 0.14171,
+    "map_at_3": 0.08625,
+    "map_at_5": 0.0986,
+    "ndcg_at_1": 0.15254,
+    "ndcg_at_10": 0.17487,
+    "ndcg_at_100": 0.266,
+    "ndcg_at_3": 0.14825,
+    "ndcg_at_5": 0.14748,
+    "precision_at_1": 0.15254,
+    "precision_at_10": 0.0839,
+    "precision_at_100": 0.02102,
+    "precision_at_3": 0.13559,
+    "precision_at_5": 0.10847,
+    "recall_at_1": 0.0438,
+    "recall_at_10": 0.21232,
+    "recall_at_100": 0.49702,
+    "recall_at_3": 0.11501,
+    "recall_at_5": 0.14293
+  }
+}

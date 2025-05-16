@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Medical",
+  "evaluation_time": "1.6 minutes",
+  "model_name": "inst-l",
+  "test": {
+    "map_at_1": 0.17719,
+    "map_at_10": 0.29305,
+    "map_at_100": 0.32294,
+    "map_at_3": 0.25241,
+    "map_at_5": 0.27261,
+    "ndcg_at_1": 0.28409,
+    "ndcg_at_10": 0.36881,
+    "ndcg_at_100": 0.46955,
+    "ndcg_at_3": 0.31129,
+    "ndcg_at_5": 0.33358,
+    "precision_at_1": 0.28409,
+    "precision_at_10": 0.10455,
+    "precision_at_100": 0.02114,
+    "precision_at_3": 0.19318,
+    "precision_at_5": 0.15909,
+    "recall_at_1": 0.17719,
+    "recall_at_10": 0.46269,
+    "recall_at_100": 0.81307,
+    "recall_at_3": 0.30894,
+    "recall_at_5": 0.36224
+  }
+}

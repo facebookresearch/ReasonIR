@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYiPatients-EN",
+  "evaluation_time": "23.05 minutes",
+  "model_name": "bmr-7b",
+  "test": {
+    "map_at_1": 0.07674,
+    "map_at_10": 0.15659,
+    "map_at_100": 0.19491,
+    "map_at_3": 0.11288,
+    "map_at_5": 0.13112,
+    "ndcg_at_1": 0.21705,
+    "ndcg_at_10": 0.2436,
+    "ndcg_at_100": 0.37981,
+    "ndcg_at_3": 0.18866,
+    "ndcg_at_5": 0.19782,
+    "precision_at_1": 0.21705,
+    "precision_at_10": 0.10388,
+    "precision_at_100": 0.02744,
+    "precision_at_3": 0.15504,
+    "precision_at_5": 0.13333,
+    "recall_at_1": 0.07674,
+    "recall_at_10": 0.30465,
+    "recall_at_100": 0.77016,
+    "recall_at_3": 0.15207,
+    "recall_at_5": 0.19961
+  }
+}

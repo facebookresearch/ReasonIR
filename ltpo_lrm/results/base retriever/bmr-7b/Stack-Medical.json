@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Medical",
+  "evaluation_time": "12.33 minutes",
+  "model_name": "bmr-7b",
+  "test": {
+    "map_at_1": 0.17428,
+    "map_at_10": 0.35297,
+    "map_at_100": 0.37823,
+    "map_at_3": 0.28057,
+    "map_at_5": 0.32181,
+    "ndcg_at_1": 0.32955,
+    "ndcg_at_10": 0.44911,
+    "ndcg_at_100": 0.53007,
+    "ndcg_at_3": 0.36361,
+    "ndcg_at_5": 0.40541,
+    "precision_at_1": 0.32955,
+    "precision_at_10": 0.13636,
+    "precision_at_100": 0.02295,
+    "precision_at_3": 0.25,
+    "precision_at_5": 0.20455,
+    "recall_at_1": 0.17428,
+    "recall_at_10": 0.59535,
+    "recall_at_100": 0.86585,
+    "recall_at_3": 0.36203,
+    "recall_at_5": 0.47938
+  }
+}

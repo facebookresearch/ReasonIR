@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Stack-Biology",
+  "evaluation_time": "0.21 minutes",
+  "model_name": "nv",
+  "test": {
+    "map_at_1": 0.13982,
+    "map_at_10": 0.30476,
+    "map_at_100": 0.34166,
+    "map_at_3": 0.22546,
+    "map_at_5": 0.26084,
+    "ndcg_at_1": 0.42718,
+    "ndcg_at_10": 0.39318,
+    "ndcg_at_100": 0.49037,
+    "ndcg_at_3": 0.34776,
+    "ndcg_at_5": 0.34921,
+    "precision_at_1": 0.42718,
+    "precision_at_10": 0.16602,
+    "precision_at_100": 0.02874,
+    "precision_at_3": 0.27832,
+    "precision_at_5": 0.21942,
+    "recall_at_1": 0.13982,
+    "recall_at_10": 0.43295,
+    "recall_at_100": 0.7571,
+    "recall_at_3": 0.24912,
+    "recall_at_5": 0.3095
+  }
+}

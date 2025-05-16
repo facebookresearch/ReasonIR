@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Treat",
+  "evaluation_time": "8.79 minutes",
+  "model_name": "grit",
+  "test": {
+    "map_at_1": 0.23444,
+    "map_at_10": 0.33228,
+    "map_at_100": 0.34592,
+    "map_at_3": 0.29215,
+    "map_at_5": 0.31325,
+    "ndcg_at_1": 0.38667,
+    "ndcg_at_10": 0.39885,
+    "ndcg_at_100": 0.45436,
+    "ndcg_at_3": 0.34576,
+    "ndcg_at_5": 0.36376,
+    "precision_at_1": 0.38667,
+    "precision_at_10": 0.094,
+    "precision_at_100": 0.01433,
+    "precision_at_3": 0.20222,
+    "precision_at_5": 0.148,
+    "recall_at_1": 0.23444,
+    "recall_at_10": 0.47056,
+    "recall_at_100": 0.68878,
+    "recall_at_3": 0.32367,
+    "recall_at_5": 0.38411
+  }
+}
