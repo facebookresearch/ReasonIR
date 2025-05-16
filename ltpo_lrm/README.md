@@ -29,7 +29,7 @@ Intelligence</p>
 
 <p align="center">
     <a href="https://cs.stanford.edu/~manlingl/projects/embodied-eval" target="_blank">
-        <img src=".images//R2MED.png" alt="R2MED" width="80%" height="80%" border="10" />
+        <img src="./images/R2MED.png" alt="R2MED" width="80%" height="80%" border="10" />
     </a>
 </p>
 
