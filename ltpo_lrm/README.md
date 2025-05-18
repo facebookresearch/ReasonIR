@@ -4,7 +4,7 @@
     <a href="https://arxiv.org/abs/xxxx">
         <img src="https://img.shields.io/badge/arXiv-2410.07166-B31B1B.svg?style=plastic&logo=arxiv" alt="arXiv">
     </a>
-    <a href="https://embodied-agent-interface.github.io/">
+    <a href="https://r2med.github.io//">
         <img src="https://img.shields.io/badge/Website-R2MED-purple?style=plastic&logo=Google%20chrome" alt="Website">
     </a>
     <a href="https://huggingface.co/R2MED" target="_blank">
