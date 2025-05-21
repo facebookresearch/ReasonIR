@@ -6,6 +6,7 @@ from tqdm import tqdm
 from collections import defaultdict
 from instrcution import *
 from openai import OpenAI
+from base import writejson_bench
 
 global_num = 0
 
@@ -20,20 +21,9 @@ class generate_func_by_gpt():
         self.pre_retrieval_path = pre_retrieval_path
         self.top_p = top_p
         self.model = OpenAI(
-            api_key="sk-4Ha83g4kQhwzqPr8lEhnPwzH5anFCwalOj1VbDEFAHpq2qr8",
-            base_url="https://api2.aigcbest.top/v1"
+            api_key="*****",
+            base_url="*****"
         )
-
-    def writejson_bench(self, data, json_file_path):
-        dir_path = os.path.dirname(json_file_path)
-        if not os.path.exists(dir_path):
-            os.makedirs(dir_path)
-        num = 0
-        with open(json_file_path, 'w', encoding='utf-8') as jsonfile:
-            for entry in data:
-                jsonfile.write(json.dumps(entry, ensure_ascii=False) + '\n')
-                num += 1
-        print(f"{json_file_path}共写入{num}条数据!")
 
     def batch_list(self, data, batch_size):
         return [data[i:i + batch_size] for i in range(0, len(data), batch_size)]
@@ -119,10 +109,8 @@ class generate_func_by_gpt():
                 "doc_id": entry["doc_id"],
             })
             num += 1
-        # import sys
-        # sys.exit(-1)
         print()
-        self.writejson_bench(results, self.save_file_path)
+        writejson_bench(results, self.save_file_path)
 
 class generate_func():
     def __init__(self, base_prompt, data_dir, save_file_path, tokenizer, sampling_params, llm, method, pre_retrieval_path=None):
@@ -134,17 +122,6 @@ class generate_func():
         self.llm = llm
         self.gar_method = method
         self.pre_retrieval_path = pre_retrieval_path
-
-    def writejson_bench(self, data, json_file_path):
-        dir_path = os.path.dirname(json_file_path)
-        if not os.path.exists(dir_path):
-            os.makedirs(dir_path)
-        num = 0
-        with open(json_file_path, 'w', encoding='utf-8') as jsonfile:
-            for entry in data:
-                jsonfile.write(json.dumps(entry, ensure_ascii=False) + '\n')
-                num += 1
-        print(f"{json_file_path}共写入{num}条数据!")
 
     def batch_list(self, data, batch_size):
         return [data[i:i + batch_size] for i in range(0, len(data), batch_size)]
@@ -195,9 +172,7 @@ class generate_func():
         if not os.path.exists(dir_path):
             os.makedirs(dir_path)
         num = 0
-        # batch_size = 256
         batch_size = 32
-        # batch_size = 16
         print(f"一共{len(all_texts)}个query！")
         global global_num
         global_num += 1
@@ -214,22 +189,12 @@ class generate_func():
                 if print_flag1 == 0 and global_num == 1:
                     print(input_prompt)
                 print_flag1 += 1
-                if model == "sky-32b":
-                    sys_prompt = SkyAI_system_prompt
-                else:
-                    sys_prompt = "You are a helpful assistant."
+                sys_prompt = "You are a helpful assistant."
                 messages = [
                     {"role": "system", "content": sys_prompt},
                     {"role": "user", "content": input_prompt}
                 ]
-                if model in ["qwen3-8b-no-thinking", "qwen3-32b-no-thinking"]:
-                    text = self.tokenizer.apply_chat_template(
-                        messages,
-                        tokenize=False,
-                        add_generation_prompt=True,
-                        enable_thinking=False
-                    )
-                elif model in ["qwen3-8b", "qwen3-32b"]:
+                if model in ["qwen3-8b", "qwen3-32b"]:
                     text = self.tokenizer.apply_chat_template(
                         messages,
                         tokenize=False,
@@ -258,63 +223,42 @@ class generate_func():
                     "doc_id": entry["doc_id"],
                 })
                 num += 1
-            # import sys
-            # sys.exit(-1)
         print()
-        self.writejson_bench(results, self.save_file_path)
+        writejson_bench(results, self.save_file_path)
 
-seed = 42
-print(f"Current process is seed {seed}")
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'
-model_dict = {
-    "qwen-7b": "/share/project/ll/llm-models/Qwen/Qwen2.5-7B-Instruct",
-    "qwen-32b": "/share/project/ll/llm-models/Qwen/Qwen2.5-32B-Instruct",
-    "qwen-72b": "/share/project/ll/llm-models/Qwen/Qwen2.5-72B-Instruct",
-    "llama-8b": "/share/project/ll/llm-models/LLM-Research/Meta-Llama-3.1-8B-Instruct",
-    "llama-70b": "/share/project/ll/llm-models/LLM-Research/Meta-Llama-3.1-70B-Instruct",
-    "gpt4": "gpt-4o-2024-11-20",
-    "o1-mini": "o1-mini-2024-09-12",
-    "r1-llama-8b": "/share/project/ll/llm-models/deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
-    "r1-qwen-32b": "/share/project/ll/llm-models/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-    "r1-llama-70b": "/share/project/ll/llm-models/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-    "huatuo-o1-8b": "/share/project/ll/llm-models/FreedomIntelligence/HuatuoGPT-o1-8B",
-    "huatuo-o1-70b": "/share/project/ll/llm-models/FreedomIntelligence/HuatuoGPT-o1-70B",
-    "qwq-32b": "/share/project/ll/llm-models/Qwen/QwQ-32B",
-    "m1-7b": "/share/project/ll/llm-models/UCSC-VLAA/m1-7B-23K",
-    "sky-32b": "/share/project/ll/llm-models/NovaSky-AI/Sky-T1-32B-Preview",
-    "deepseek-r1": "DeepSeek-R1",
-    "qwen3-8b-no-thinking": "/share/project/ll/llm-models/Qwen/Qwen3-8B",
-    "qwen3-8b": "/share/project/ll/llm-models/Qwen/Qwen3-8B",
-    "qwen3-32b-no-thinking": "/share/project/ll/llm-models/Qwen/Qwen3-32B",
-    "qwen3-32b": "/share/project/ll/llm-models/Qwen/Qwen3-32B",
-    "searchr1-qwen-7b": "/share/project/ll/llm-models/PeterJinGo/SearchR1-nq_hotpotqa_train-qwen2.5-7b-it-em-ppo",
-}
-
-method = "hyde"
-model = "qwen-32b"
-model_path = model_dict[model]
-if model not in ["gpt4", "deepseek-r1", "o1-mini"]:
-    sampling_params = SamplingParams(temperature=0.7, seed=seed, max_tokens=10240)
-    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-    if model in ["qwen-7b", "m1-7b"]:
+def generate_hy_doc(gar_method="", gar_llm="", task_names=[""]):
+    seed = 42
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'
+    model_dict = {
+        "qwen-7b": "model_dir/Qwen/Qwen2.5-7B-Instruct",
+        "qwen-32b": "model_dir/Qwen/Qwen2.5-32B-Instruct",
+        "qwen-72b": "model_dir/Qwen/Qwen2.5-72B-Instruct",
+        "llama-70b": "model_dir/LLM-Research/Meta-Llama-3.1-70B-Instruct",
+        "gpt4": "gpt-4o-2024-11-20",
+        "o3-mini": "o3-mini",
+        "r1-qwen-32b": "model_dir/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "r1-llama-70b": "model_dir/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+        "huatuo-o1-70b": "model_dir/FreedomIntelligence/HuatuoGPT-o1-70B",
+        "qwq-32b": "model_dir/Qwen/QwQ-32B",
+        "qwen3-32b": "model_dir/Qwen/Qwen3-32B",
+    }
+    model_path = model_dict[gar_llm]
+    if gar_llm not in ["gpt4", "o3-mini"]:
+        sampling_params = SamplingParams(temperature=0.7, seed=seed, max_tokens=10240)
+        tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
         tensor_parallel_size = 4
-    else:
-        tensor_parallel_size = 4
-    llm = LLM(model=model_path, tensor_parallel_size=tensor_parallel_size, disable_custom_all_reduce=True, trust_remote_code=True, gpu_memory_utilization=0.85)
-    print(f"llm have downloaded from {model_path}!")
-# task_names = ["Stack-Biology"] # Stack-Biology BEIR_NFCorpus
-task_names = ["Stack-Biology", "Stack-Medical", "Stack-Bioinformatics", "MedXpertQA-Exam",
-                  'MedQA-Diag', "PMC-Treat", "PMCPatients", "IIYiPatients-EN"]
-for task_name in task_names:
-    base_prompt = generate_hy_doc[method][task_name]
-    data_dir = f'../Benchmark/{task_name}/'
-    save_path = f'../Benchmark/{task_name}/{method}/{model}/query_with_hydoc.jsonl'
-    pre_retrieval_path = None
-    if method == "lamer":
-        pre_retrieval_path = f"./topk_docs/BM25/{task_name}.jsonl"
-    if model in ["gpt4", "deepseek-r1", "o1-mini"]:
-        qua = generate_func_by_gpt(base_prompt, data_dir, save_path, model_path, method, pre_retrieval_path=pre_retrieval_path)
-        qua.process()
-    else:
-        qua = generate_func(base_prompt, data_dir, save_path, tokenizer, sampling_params, llm, method, pre_retrieval_path)
-        qua.process(model)
+        llm = LLM(model=model_path, tensor_parallel_size=tensor_parallel_size, disable_custom_all_reduce=True, trust_remote_code=True, gpu_memory_utilization=0.85)
+        print(f"llm have downloaded from {model_path}!")
+    for task_name in task_names:
+        base_prompt = generate_hy_doc[gar_method][task_name]
+        data_dir = f'../dataset/{task_name}/'
+        save_path = f'../dataset/{task_name}/{gar_method}/{gar_llm}/query_with_hydoc.jsonl'
+        pre_retrieval_path = None
+        if gar_method == "lamer":
+            pre_retrieval_path = f"../output/topk_docs/bm25/{task_name}.jsonl"
+        if gar_llm in ["gpt4", "o3-mini"]:
+            qua = generate_func_by_gpt(base_prompt, data_dir, save_path, model_path, gar_method, pre_retrieval_path=pre_retrieval_path)
+            qua.process()
+        else:
+            qua = generate_func(base_prompt, data_dir, save_path, tokenizer, sampling_params, llm, gar_method, pre_retrieval_path)
+            qua.process(gar_llm)

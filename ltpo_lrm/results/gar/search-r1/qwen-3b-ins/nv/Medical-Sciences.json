@@ -1,0 +1,29 @@
+{
+  "dataset_name": "Medical-Sciences",
+  "evaluation_time": "0.13 minutes",
+  "gar_llm": "qwen-3b-ins",
+  "gar_method": "search-r1",
+  "retriever_name": "nv",
+  "test": {
+    "map_at_1": 0.21602,
+    "map_at_10": 0.38044,
+    "map_at_100": 0.40591,
+    "map_at_3": 0.30782,
+    "map_at_5": 0.34563,
+    "ndcg_at_1": 0.34091,
+    "ndcg_at_10": 0.47571,
+    "ndcg_at_100": 0.55967,
+    "ndcg_at_3": 0.38369,
+    "ndcg_at_5": 0.42325,
+    "precision_at_1": 0.34091,
+    "precision_at_10": 0.13977,
+    "precision_at_100": 0.02409,
+    "precision_at_3": 0.25,
+    "precision_at_5": 0.20455,
+    "recall_at_1": 0.21602,
+    "recall_at_10": 0.6168,
+    "recall_at_100": 0.89416,
+    "recall_at_3": 0.38304,
+    "recall_at_5": 0.48735
+  }
+}

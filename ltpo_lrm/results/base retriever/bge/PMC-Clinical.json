@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Clinical",
+  "evaluation_time": "0.02 minutes",
+  "model_name": "bge",
+  "test": {
+    "map_at_1": 0.05409,
+    "map_at_10": 0.10289,
+    "map_at_100": 0.11984,
+    "map_at_3": 0.07481,
+    "map_at_5": 0.08767,
+    "ndcg_at_1": 0.12281,
+    "ndcg_at_10": 0.1506,
+    "ndcg_at_100": 0.23508,
+    "ndcg_at_3": 0.09895,
+    "ndcg_at_5": 0.11843,
+    "precision_at_1": 0.12281,
+    "precision_at_10": 0.04649,
+    "precision_at_100": 0.01228,
+    "precision_at_3": 0.0731,
+    "precision_at_5": 0.0614,
+    "recall_at_1": 0.05409,
+    "recall_at_10": 0.22295,
+    "recall_at_100": 0.55848,
+    "recall_at_3": 0.09503,
+    "recall_at_5": 0.13523
+  }
+}

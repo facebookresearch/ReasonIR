@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Treatment",
+  "evaluation_time": "1.37 minutes",
+  "model_name": "inst-l",
+  "test": {
+    "map_at_1": 0.07967,
+    "map_at_10": 0.11809,
+    "map_at_100": 0.12671,
+    "map_at_3": 0.09857,
+    "map_at_5": 0.1071,
+    "ndcg_at_1": 0.13333,
+    "ndcg_at_10": 0.1584,
+    "ndcg_at_100": 0.20575,
+    "ndcg_at_3": 0.12163,
+    "ndcg_at_5": 0.13536,
+    "precision_at_1": 0.13333,
+    "precision_at_10": 0.04133,
+    "precision_at_100": 0.00813,
+    "precision_at_3": 0.07333,
+    "precision_at_5": 0.056,
+    "recall_at_1": 0.07967,
+    "recall_at_10": 0.21078,
+    "recall_at_100": 0.41456,
+    "recall_at_3": 0.11989,
+    "recall_at_5": 0.15567
+  }
+}

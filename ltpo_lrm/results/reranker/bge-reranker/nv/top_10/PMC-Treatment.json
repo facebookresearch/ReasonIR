@@ -1,0 +1,30 @@
+{
+  "dataset_name": "PMC-Treatment",
+  "evaluation_time": "0.39 minutes",
+  "reranker_name": "bge-reranker",
+  "retriever_name": "nv",
+  "test": {
+    "MAP@1": 0.02622,
+    "MAP@10": 0.15462,
+    "MAP@100": 0.15462,
+    "MAP@25": 0.15462,
+    "MAP@50": 0.15462,
+    "MRR": 0.22054,
+    "NDCG@1": 0.06,
+    "NDCG@10": 0.26195,
+    "NDCG@100": 0.26195,
+    "NDCG@25": 0.26195,
+    "NDCG@50": 0.26195,
+    "P@1": 0.06,
+    "P@10": 0.102,
+    "P@100": 0.0102,
+    "P@25": 0.0408,
+    "P@50": 0.0204,
+    "Recall@1": 0.02622,
+    "Recall@10": 0.49322,
+    "Recall@100": 0.49322,
+    "Recall@25": 0.49322,
+    "Recall@50": 0.49322
+  },
+  "topk": 10
+}

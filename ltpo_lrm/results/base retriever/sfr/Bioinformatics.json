@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "31.35 minutes",
+  "model_name": "sfr",
+  "test": {
+    "map_at_1": 0.19536,
+    "map_at_10": 0.37217,
+    "map_at_100": 0.4063,
+    "map_at_3": 0.29267,
+    "map_at_5": 0.34592,
+    "ndcg_at_1": 0.37662,
+    "ndcg_at_10": 0.45911,
+    "ndcg_at_100": 0.55482,
+    "ndcg_at_3": 0.38531,
+    "ndcg_at_5": 0.42689,
+    "precision_at_1": 0.37662,
+    "precision_at_10": 0.15065,
+    "precision_at_100": 0.0261,
+    "precision_at_3": 0.25974,
+    "precision_at_5": 0.23117,
+    "recall_at_1": 0.19536,
+    "recall_at_10": 0.55674,
+    "recall_at_100": 0.87863,
+    "recall_at_3": 0.34734,
+    "recall_at_5": 0.4662
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "dataset_name": "IIYi-Clinical",
+  "evaluation_time": "0.03 minutes",
+  "gar_llm": "qwen-72b",
+  "gar_method": "hyde",
+  "retriever_name": "bge",
+  "test": {
+    "map_at_1": 0.03786,
+    "map_at_10": 0.09965,
+    "map_at_100": 0.12716,
+    "map_at_3": 0.06748,
+    "map_at_5": 0.08356,
+    "ndcg_at_1": 0.13953,
+    "ndcg_at_10": 0.16796,
+    "ndcg_at_100": 0.27834,
+    "ndcg_at_3": 0.12331,
+    "ndcg_at_5": 0.13327,
+    "precision_at_1": 0.13953,
+    "precision_at_10": 0.07984,
+    "precision_at_100": 0.0214,
+    "precision_at_3": 0.1137,
+    "precision_at_5": 0.10233,
+    "recall_at_1": 0.03786,
+    "recall_at_10": 0.21731,
+    "recall_at_100": 0.59096,
+    "recall_at_3": 0.09005,
+    "recall_at_5": 0.13863
+  }
+}

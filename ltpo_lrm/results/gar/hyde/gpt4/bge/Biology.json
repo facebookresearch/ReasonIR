@@ -1,0 +1,29 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "0.48 minutes",
+  "gar_llm": "gpt4",
+  "gar_method": "hyde",
+  "retriever_name": "bge",
+  "test": {
+    "map_at_1": 0.06336,
+    "map_at_10": 0.15523,
+    "map_at_100": 0.18138,
+    "map_at_3": 0.1178,
+    "map_at_5": 0.13909,
+    "ndcg_at_1": 0.23301,
+    "ndcg_at_10": 0.22593,
+    "ndcg_at_100": 0.31668,
+    "ndcg_at_3": 0.20011,
+    "ndcg_at_5": 0.21017,
+    "precision_at_1": 0.23301,
+    "precision_at_10": 0.09806,
+    "precision_at_100": 0.02126,
+    "precision_at_3": 0.17152,
+    "precision_at_5": 0.14757,
+    "recall_at_1": 0.06336,
+    "recall_at_10": 0.25902,
+    "recall_at_100": 0.56587,
+    "recall_at_3": 0.15071,
+    "recall_at_5": 0.19949
+  }
+}

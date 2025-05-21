@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "10.68 minutes",
+  "model_name": "voyage",
+  "test": {
+    "map_at_1": 0.15272,
+    "map_at_10": 0.30775,
+    "map_at_100": 0.33807,
+    "map_at_3": 0.24971,
+    "map_at_5": 0.28495,
+    "ndcg_at_1": 0.32468,
+    "ndcg_at_10": 0.38984,
+    "ndcg_at_100": 0.49502,
+    "ndcg_at_3": 0.34568,
+    "ndcg_at_5": 0.3657,
+    "precision_at_1": 0.32468,
+    "precision_at_10": 0.12468,
+    "precision_at_100": 0.02468,
+    "precision_at_3": 0.24242,
+    "precision_at_5": 0.19481,
+    "recall_at_1": 0.15272,
+    "recall_at_10": 0.48247,
+    "recall_at_100": 0.85261,
+    "recall_at_3": 0.32137,
+    "recall_at_5": 0.41034
+  }
+}

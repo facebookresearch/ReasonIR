@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "2.02 minutes",
+  "model_name": "bmr-2b",
+  "test": {
+    "map_at_1": 0.11407,
+    "map_at_10": 0.25753,
+    "map_at_100": 0.29269,
+    "map_at_3": 0.20711,
+    "map_at_5": 0.23565,
+    "ndcg_at_1": 0.23377,
+    "ndcg_at_10": 0.33298,
+    "ndcg_at_100": 0.44602,
+    "ndcg_at_3": 0.28581,
+    "ndcg_at_5": 0.30518,
+    "precision_at_1": 0.23377,
+    "precision_at_10": 0.11299,
+    "precision_at_100": 0.02403,
+    "precision_at_3": 0.21212,
+    "precision_at_5": 0.17403,
+    "recall_at_1": 0.11407,
+    "recall_at_10": 0.43089,
+    "recall_at_100": 0.81628,
+    "recall_at_3": 0.27189,
+    "recall_at_5": 0.34191
+  }
+}

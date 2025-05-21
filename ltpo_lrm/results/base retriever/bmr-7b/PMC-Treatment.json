@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Treatment",
+  "evaluation_time": "9.97 minutes",
+  "model_name": "bmr-7b",
+  "test": {
+    "map_at_1": 0.31011,
+    "map_at_10": 0.40339,
+    "map_at_100": 0.41721,
+    "map_at_3": 0.367,
+    "map_at_5": 0.38783,
+    "ndcg_at_1": 0.52667,
+    "ndcg_at_10": 0.46884,
+    "ndcg_at_100": 0.52474,
+    "ndcg_at_3": 0.42599,
+    "ndcg_at_5": 0.44145,
+    "precision_at_1": 0.52667,
+    "precision_at_10": 0.10267,
+    "precision_at_100": 0.01493,
+    "precision_at_3": 0.24,
+    "precision_at_5": 0.172,
+    "recall_at_1": 0.31011,
+    "recall_at_10": 0.50878,
+    "recall_at_100": 0.73322,
+    "recall_at_3": 0.38433,
+    "recall_at_5": 0.444
+  }
+}

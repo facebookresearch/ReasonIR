@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Clinical",
+  "evaluation_time": "15.96 minutes",
+  "model_name": "voyage",
+  "test": {
+    "map_at_1": 0.125,
+    "map_at_10": 0.21755,
+    "map_at_100": 0.23643,
+    "map_at_3": 0.17629,
+    "map_at_5": 0.20056,
+    "ndcg_at_1": 0.23684,
+    "ndcg_at_10": 0.28681,
+    "ndcg_at_100": 0.3686,
+    "ndcg_at_3": 0.22029,
+    "ndcg_at_5": 0.2531,
+    "precision_at_1": 0.23684,
+    "precision_at_10": 0.07544,
+    "precision_at_100": 0.01474,
+    "precision_at_3": 0.1462,
+    "precision_at_5": 0.11404,
+    "recall_at_1": 0.125,
+    "recall_at_10": 0.38158,
+    "recall_at_100": 0.70687,
+    "recall_at_3": 0.22515,
+    "recall_at_5": 0.29898
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "0.17 minutes",
+  "gar_llm": "qwen-3b-ins",
+  "gar_method": "search-r1",
+  "retriever_name": "nv",
+  "test": {
+    "map_at_1": 0.08582,
+    "map_at_10": 0.19209,
+    "map_at_100": 0.22251,
+    "map_at_3": 0.13869,
+    "map_at_5": 0.1598,
+    "ndcg_at_1": 0.27184,
+    "ndcg_at_10": 0.25756,
+    "ndcg_at_100": 0.35173,
+    "ndcg_at_3": 0.23132,
+    "ndcg_at_5": 0.22619,
+    "precision_at_1": 0.27184,
+    "precision_at_10": 0.11359,
+    "precision_at_100": 0.02233,
+    "precision_at_3": 0.19417,
+    "precision_at_5": 0.14951,
+    "recall_at_1": 0.08582,
+    "recall_at_10": 0.29016,
+    "recall_at_100": 0.61508,
+    "recall_at_3": 0.16115,
+    "recall_at_5": 0.19772
+  }
+}

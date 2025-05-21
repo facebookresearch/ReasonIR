@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Medical-Sciences",
+  "evaluation_time": "4.55 minutes",
+  "model_name": "inst-xl",
+  "test": {
+    "map_at_1": 0.15314,
+    "map_at_10": 0.28676,
+    "map_at_100": 0.31097,
+    "map_at_3": 0.23729,
+    "map_at_5": 0.26248,
+    "ndcg_at_1": 0.22727,
+    "ndcg_at_10": 0.36791,
+    "ndcg_at_100": 0.46094,
+    "ndcg_at_3": 0.29523,
+    "ndcg_at_5": 0.33029,
+    "precision_at_1": 0.22727,
+    "precision_at_10": 0.10795,
+    "precision_at_100": 0.0208,
+    "precision_at_3": 0.19697,
+    "precision_at_5": 0.16364,
+    "recall_at_1": 0.15314,
+    "recall_at_10": 0.49361,
+    "recall_at_100": 0.8306,
+    "recall_at_3": 0.31312,
+    "recall_at_5": 0.398
+  }
+}

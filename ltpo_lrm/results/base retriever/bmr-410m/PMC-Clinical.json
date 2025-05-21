@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Clinical",
+  "evaluation_time": "1.74 minutes",
+  "model_name": "bmr-410m",
+  "test": {
+    "map_at_1": 0.07383,
+    "map_at_10": 0.12659,
+    "map_at_100": 0.14446,
+    "map_at_3": 0.10587,
+    "map_at_5": 0.11698,
+    "ndcg_at_1": 0.14035,
+    "ndcg_at_10": 0.17456,
+    "ndcg_at_100": 0.25466,
+    "ndcg_at_3": 0.13701,
+    "ndcg_at_5": 0.15288,
+    "precision_at_1": 0.14035,
+    "precision_at_10": 0.04561,
+    "precision_at_100": 0.01149,
+    "precision_at_3": 0.09064,
+    "precision_at_5": 0.06842,
+    "recall_at_1": 0.07383,
+    "recall_at_10": 0.23246,
+    "recall_at_100": 0.55409,
+    "recall_at_3": 0.13889,
+    "recall_at_5": 0.1769
+  }
+}

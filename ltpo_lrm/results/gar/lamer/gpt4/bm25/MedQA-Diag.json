@@ -1,7 +1,9 @@
 {
   "dataset_name": "MedQA-Diag",
   "evaluation_time": "0.37 minutes",
-  "model_name": "bm25",
+  "gar_llm": "gpt4",
+  "gar_method": "lamer",
+  "retriever_name": "bm25",
   "test": {
     "MAP@1": 0.05007,
     "MAP@10": 0.15026,

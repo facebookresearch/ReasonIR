@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "1.65 minutes",
+  "model_name": "bmr-2b",
+  "test": {
+    "map_at_1": 0.06234,
+    "map_at_10": 0.13376,
+    "map_at_100": 0.15946,
+    "map_at_3": 0.10386,
+    "map_at_5": 0.1185,
+    "ndcg_at_1": 0.19417,
+    "ndcg_at_10": 0.195,
+    "ndcg_at_100": 0.29509,
+    "ndcg_at_3": 0.17043,
+    "ndcg_at_5": 0.16964,
+    "precision_at_1": 0.19417,
+    "precision_at_10": 0.08058,
+    "precision_at_100": 0.02117,
+    "precision_at_3": 0.14563,
+    "precision_at_5": 0.1068,
+    "recall_at_1": 0.06234,
+    "recall_at_10": 0.23421,
+    "recall_at_100": 0.57451,
+    "recall_at_3": 0.12899,
+    "recall_at_5": 0.16232
+  }
+}

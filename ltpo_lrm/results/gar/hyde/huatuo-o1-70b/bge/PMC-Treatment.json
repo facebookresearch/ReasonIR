@@ -1,0 +1,29 @@
+{
+  "dataset_name": "PMC-Treatment",
+  "evaluation_time": "0.03 minutes",
+  "gar_llm": "huatuo-o1-70b",
+  "gar_method": "hyde",
+  "retriever_name": "bge",
+  "test": {
+    "map_at_1": 0.23489,
+    "map_at_10": 0.36378,
+    "map_at_100": 0.37674,
+    "map_at_3": 0.33189,
+    "map_at_5": 0.35456,
+    "ndcg_at_1": 0.39333,
+    "ndcg_at_10": 0.43291,
+    "ndcg_at_100": 0.48371,
+    "ndcg_at_3": 0.39947,
+    "ndcg_at_5": 0.41536,
+    "precision_at_1": 0.39333,
+    "precision_at_10": 0.09867,
+    "precision_at_100": 0.01407,
+    "precision_at_3": 0.24222,
+    "precision_at_5": 0.17467,
+    "recall_at_1": 0.23489,
+    "recall_at_10": 0.50389,
+    "recall_at_100": 0.69822,
+    "recall_at_3": 0.40078,
+    "recall_at_5": 0.46411
+  }
+}

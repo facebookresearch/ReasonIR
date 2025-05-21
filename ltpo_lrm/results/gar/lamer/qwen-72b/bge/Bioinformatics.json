@@ -1,0 +1,29 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "0.04 minutes",
+  "gar_llm": "qwen-72b",
+  "gar_method": "lamer",
+  "retriever_name": "bge",
+  "test": {
+    "map_at_1": 0.13227,
+    "map_at_10": 0.2881,
+    "map_at_100": 0.31578,
+    "map_at_3": 0.22084,
+    "map_at_5": 0.26375,
+    "ndcg_at_1": 0.27273,
+    "ndcg_at_10": 0.3773,
+    "ndcg_at_100": 0.46733,
+    "ndcg_at_3": 0.3082,
+    "ndcg_at_5": 0.34769,
+    "precision_at_1": 0.27273,
+    "precision_at_10": 0.13117,
+    "precision_at_100": 0.02338,
+    "precision_at_3": 0.22078,
+    "precision_at_5": 0.1974,
+    "recall_at_1": 0.13227,
+    "recall_at_10": 0.48734,
+    "recall_at_100": 0.80618,
+    "recall_at_3": 0.28904,
+    "recall_at_5": 0.40022
+  }
+}

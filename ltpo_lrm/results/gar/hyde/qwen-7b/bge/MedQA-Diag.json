@@ -1,7 +1,9 @@
 {
   "dataset_name": "MedQA-Diag",
   "evaluation_time": "1.17 minutes",
-  "model_name": "bge",
+  "gar_llm": "qwen-7b",
+  "gar_method": "hyde",
+  "retriever_name": "bge",
   "test": {
     "map_at_1": 0.03347,
     "map_at_10": 0.10364,

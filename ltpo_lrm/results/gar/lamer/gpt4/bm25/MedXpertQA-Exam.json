@@ -1,7 +1,9 @@
 {
   "dataset_name": "MedXpertQA-Exam",
   "evaluation_time": "0.36 minutes",
-  "model_name": "bm25",
+  "gar_llm": "gpt4",
+  "gar_method": "lamer",
+  "retriever_name": "bm25",
   "test": {
     "MAP@1": 0.04649,
     "MAP@10": 0.07345,

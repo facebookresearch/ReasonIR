@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "4.11 minutes",
+  "model_name": "inst-xl",
+  "test": {
+    "map_at_1": 0.06339,
+    "map_at_10": 0.14293,
+    "map_at_100": 0.16907,
+    "map_at_3": 0.10463,
+    "map_at_5": 0.12463,
+    "ndcg_at_1": 0.20388,
+    "ndcg_at_10": 0.21558,
+    "ndcg_at_100": 0.31041,
+    "ndcg_at_3": 0.17348,
+    "ndcg_at_5": 0.18679,
+    "precision_at_1": 0.20388,
+    "precision_at_10": 0.09612,
+    "precision_at_100": 0.02214,
+    "precision_at_3": 0.14887,
+    "precision_at_5": 0.1301,
+    "recall_at_1": 0.06339,
+    "recall_at_10": 0.26588,
+    "recall_at_100": 0.59576,
+    "recall_at_3": 0.12909,
+    "recall_at_5": 0.17991
+  }
+}

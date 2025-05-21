@@ -17,16 +17,6 @@ import re
 import tiktoken
 import voyageai
 
-def writejson_bench(data, json_file_path):
-    dir_path = os.path.dirname(json_file_path)
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
-    num = 0
-    with open(json_file_path, 'w', encoding='utf-8') as jsonfile:
-        for entry in data:
-            jsonfile.write(json.dumps(entry, ensure_ascii=False) + '\n')
-            num += 1
-    print(f"{json_file_path}共写入{num}条数据!")
 
 class FlagDRESModel:
     def __init__(
@@ -60,7 +50,6 @@ class FlagDRESModel:
         self.max_length = max_length
         self.encode_mode = encode_mode
         self.cache_path = cache_path
-
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
         elif is_torch_npu_available():
@@ -111,9 +100,6 @@ class FlagDRESModel:
             print(f">>Document embedding already exists so we can just load it!")
             doc_embeddings = np.load(self.cache_path, allow_pickle=True)
             return doc_embeddings
-        # For BEIR (contriever, BMRetriever) settings
-        # if isinstance(corpus[0], dict):
-        #     input_texts = ['{} {}'.format(doc.get('title', ''), doc['text']).strip() for doc in corpus]
         if isinstance(corpus[0], dict):
             input_texts = [doc['text'] for doc in corpus]
         else:
@@ -292,7 +278,6 @@ class BiEncoderModel:
             max_length: int = 512,
             cache_path: str = "",
     ) -> None:
-
         self.query_tokenizer = AutoTokenizer.from_pretrained(query_encoder_name_or_path)
         self.query_model = AutoModel.from_pretrained(query_encoder_name_or_path)
         self.doc_tokenizer = AutoTokenizer.from_pretrained(doc_encoder_name_or_path)
@@ -302,7 +287,6 @@ class BiEncoderModel:
         self.batch_size = batch_size
         self.max_length = max_length
         self.cache_path = cache_path
-
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
         elif is_torch_npu_available():
@@ -352,8 +336,6 @@ class BiEncoderModel:
             doc_embeddings = np.load(self.cache_path, allow_pickle=True)
             return doc_embeddings
         if isinstance(corpus[0], dict):
-            ## Reproduce BEIR Settings
-            # input_texts = [[doc['title'], doc['text']] for doc in corpus]
             input_texts = [doc['text'] for doc in corpus]
         else:
             input_texts = corpus
@@ -368,7 +350,6 @@ class BiEncoderModel:
             all_embeddings = []
             for start_index in tqdm(range(0, len(sentences), self.batch_size), desc="Batches", disable=len(sentences)<self.batch_size):
                 sentences_batch = sentences[start_index:start_index + self.batch_size]
-                # title_batch = ["" for s in sentences_batch]
                 inputs = self.query_tokenizer(
                     sentences_batch,
                     padding=True,
@@ -387,8 +368,6 @@ class BiEncoderModel:
             for start_index in tqdm(range(0, len(sentences), self.batch_size), desc="Batches",
                                     disable=len(sentences) < self.batch_size):
                 sentences_batch = sentences[start_index:start_index + self.batch_size]
-                # title_batch = [s[0] for s in sentences_batch]
-                # sentences_batch = [s[1] for s in sentences_batch]
                 title_batch = ["" for s in sentences_batch]
                 inputs = self.doc_tokenizer(
                     title_batch,
@@ -478,9 +457,6 @@ class HighScaleModel:
             print(f">>Document embedding already exists so we can just load it!")
             doc_embeddings = np.load(self.cache_path, allow_pickle=True)
             return doc_embeddings
-        # For BEIR (contriever, BMRetriever) settings
-        # if isinstance(corpus[0], dict):
-        #     input_texts = ['{} {}'.format(doc.get('title', ''), doc['text']).strip() for doc in corpus]
         if isinstance(corpus[0], dict):
             input_texts = [doc['text'] for doc in corpus]
         else:
@@ -574,7 +550,6 @@ class GritModel:
             doc_max_length: int = 2048,
             cache_path: str = "",
     ) -> None:
-
         self.model = GritLM(model_name_or_path,torch_dtype="auto", mode="embedding",device_map="auto")
         self.query_instruction_for_retrieval = query_instruction_for_retrieval
         self.document_instruction_for_retrieval = document_instruction_for_retrieval
@@ -582,7 +557,6 @@ class GritModel:
         self.query_max_length = query_max_length
         self.doc_max_length = doc_max_length
         self.cache_path = cache_path
-
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
         elif is_torch_npu_available():
@@ -653,7 +627,6 @@ class NVEmbedModel:
         self.batch_size = batch_size
         self.max_length = max_length
         self.cache_path = cache_path
-
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
         elif is_torch_npu_available():
@@ -683,9 +656,6 @@ class NVEmbedModel:
             print(f">>Document embedding already exists so we can just load it!")
             doc_embeddings = np.load(self.cache_path, allow_pickle=True)
             return doc_embeddings
-        # For BEIR (contriever, BMRetriever) settings
-        # if isinstance(corpus[0], dict):
-        #     input_texts = ['{} {}'.format(doc.get('title', ''), doc['text']).strip() for doc in corpus]
         if isinstance(corpus[0], dict):
             input_texts = [doc['text'] for doc in corpus]
         else:
@@ -720,15 +690,15 @@ class RetrievalOPENAI:
     ) -> None:
         if model_name_or_path == "text-embedding-3-large":
             self.model = OpenAI(
-                api_key="sk-4Ha83g4kQhwzqPr8lEhnPwzH5anFCwalOj1VbDEFAHpq2qr8",
-                base_url="https://api2.aigcbest.top/v1"
+                api_key="*****",
+                base_url="*****"
             )
             self.tokenizer = tiktoken.get_encoding("cl100k_base")
         elif "voyage" in model_name_or_path:
             self.model = voyageai.Client(
-                api_key="pa-OLTeUSLC1cdVDgSWJMMSqEQ0cxpfS0Ibxcb7KtmYnum",
+                api_key="*****",
             )
-            self.tokenizer = AutoTokenizer.from_pretrained(f'./voyageai/{model_name_or_path}')
+            self.tokenizer = AutoTokenizer.from_pretrained(f'../voyageai/{model_name_or_path}')
         self.model_name = model_name_or_path
         self.query_cache_path = query_cache_path,
         self.doc_cache_path = doc_cache_path,
@@ -753,23 +723,16 @@ class RetrievalOPENAI:
             np.save(self.query_cache_path, query_embeddings)
             return query_embeddings
         else:
-            if os.path.isfile(self.query_cache_path):
-                print(f">>Query embedding already exists so we can just load it!")
-                emb_base = np.load(self.query_cache_path, allow_pickle=True)
-            # queries_base = [q[0] for q in queries]
-            # if self.query_instruction_for_retrieval is not None:
-            #     input_texts_base = ['{}{}'.format(self.query_instruction_for_retrieval, q) for q in queries_base]
-            # else:
-            #     input_texts_base = queries_base
-            # print(f">>>> Encoding Queries <<<<")
-            # emb_base = self.encode(input_texts_base, "query")
+            queries_base = [q[0] for q in queries]
+            if self.query_instruction_for_retrieval is not None:
+                input_texts_base = ['{}{}'.format(self.query_instruction_for_retrieval, q) for q in queries_base]
+            else:
+                input_texts_base = queries_base
+            print(f">>>> Encoding Queries <<<<")
+            emb_base = self.encode(input_texts_base, "query")
             print(f">>>> Encoding Rewrite Queries <<<<")
             queries_rewrite = [q[1] for q in queries]
             emb_rewrite = self.encode(queries_rewrite, "query")
-            new_path = self.query_cache_path.replace("./doc_embs/", "./doc_embs/search-o1/")
-            # 确保新路径的目录存在
-            os.makedirs(os.path.dirname(new_path), exist_ok=True)
-            np.save(new_path, emb_rewrite)
             emb_final = (emb_base + emb_rewrite) / 2
             return emb_final
 
@@ -917,95 +880,3 @@ class RerankerModel:
                 score = self.model(**inputs).logits[0][0]
                 scores.append(score.cpu().float().item())
         return scores
-
-class RerankerGPT:
-    def __init__(
-            self,
-            model_name_or_path: str = None,
-            temperature: float = 0.8,
-            top_p: float = 0.8,
-            cache_path: str = None,
-    ) -> None:
-        self.client = OpenAI(
-            api_key="sk-4Ha83g4kQhwzqPr8lEhnPwzH5anFCwalOj1VbDEFAHpq2qr8",
-            base_url="https://api2.aigcbest.top/v1"
-        )
-        self.model_name = model_name_or_path
-        self.temperature = temperature
-        self.top_p = top_p
-        self.cache_path = cache_path
-        self.tokenizer = tiktoken.get_encoding("cl100k_base")
-
-    def cut_text_openai(self, text, threshold=64):
-        token_ids = self.tokenizer.encode(text)
-        if len(token_ids) > threshold:
-            text = self.tokenizer.decode(token_ids[:threshold])
-        return text
-
-    def init_cache_data(self):
-        if not os.path.exists(os.path.dirname(self.cache_path)):
-            os.makedirs(os.path.dirname(self.cache_path))
-        if os.path.exists(self.cache_path):
-            cache_data = {}
-            with open(self.cache_path, 'r', encoding='utf-8') as file:
-                for line in file:
-                    entry = json.loads(line)
-                    cache_data[entry["id"]] = entry["ranking"]
-        else:
-            cache_data = {}
-        self.cache_data = cache_data
-        self.cache_writer = open(self.cache_path, mode="a+", encoding="utf-8")
-
-    def parse_json(self, text):
-        matches = re.findall(r"(?:```json\s*)(.+)(?:```)", text, re.DOTALL)
-        if len(matches) > 0:
-            try:
-                return json.loads(matches[-1].strip())
-            except:
-                return None
-        return None
-    def predict(self, q_text, p_texts: List[List], **kwargs) -> np.ndarray:
-        topk = 10
-        qid = q_text[0]
-        if qid in self.cache_data:
-            output = self.cache_data[qid]
-            return output
-        cur_query = q_text[1].replace('\n','  ')
-        doc_string = ""
-        indices_map = {}
-        for id, doc in enumerate(p_texts):
-            if len(p_texts) > 50:
-                doc[1] = self.cut_text_openai(doc[1])
-            doc_string += "[{}]. {}\n\n".format(id + 1, re.sub('\n+', ' ', doc[1]))
-            indices_map[id + 1] = doc[0]
-        content = (f'The following passages are related to query: {cur_query}\n\n'
-                  f'{doc_string}'
-                  f'First identify the essential problem in the query.\n'
-                  f'Think step by step to reason about why each document is relevant or irrelevant.\n'
-                  f'Rank these passages based on their relevance to the query.\n'
-                  f'Please output the ranking result of passages as a list, where the first element is the id of the most relevant '
-                  f'passage, the second element is the id of the second most element, etc.\n'
-                  f'Please strictly follow the format to output a list of {topk} ids corresponding to the most relevant {topk} passages, sorted from the most to least relevant passage. First think step by step and write the reasoning process, then output the ranking results as a list of ids in a json format.'
-                  )
-        chat_completion = self.client.chat.completions.create(
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": content}
-            ],
-            model=self.model_name,
-            temperature=self.temperature,
-            top_p=self.top_p
-        )
-        response = chat_completion.choices[0].message.content
-        output = self.parse_json(response)
-        if output is None:
-            output = [d[0] for d in p_texts]
-        else:
-            output = [indices_map[r] for r in output if r in indices_map]
-        new_data = {
-            "id": qid,
-            "ranking": output,
-            "llm": response
-        }
-        self.cache_writer.write(json.dumps(new_data, ensure_ascii=False) + "\n")
-        return output

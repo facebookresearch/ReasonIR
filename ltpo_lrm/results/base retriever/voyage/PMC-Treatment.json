@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Treatment",
+  "evaluation_time": "8.67 minutes",
+  "model_name": "voyage",
+  "test": {
+    "map_at_1": 0.27911,
+    "map_at_10": 0.38109,
+    "map_at_100": 0.39928,
+    "map_at_3": 0.34059,
+    "map_at_5": 0.36654,
+    "ndcg_at_1": 0.44667,
+    "ndcg_at_10": 0.45281,
+    "ndcg_at_100": 0.51467,
+    "ndcg_at_3": 0.40209,
+    "ndcg_at_5": 0.42462,
+    "precision_at_1": 0.44667,
+    "precision_at_10": 0.10067,
+    "precision_at_100": 0.0154,
+    "precision_at_3": 0.23556,
+    "precision_at_5": 0.172,
+    "recall_at_1": 0.27911,
+    "recall_at_10": 0.52044,
+    "recall_at_100": 0.75044,
+    "recall_at_3": 0.38167,
+    "recall_at_5": 0.45056
+  }
+}

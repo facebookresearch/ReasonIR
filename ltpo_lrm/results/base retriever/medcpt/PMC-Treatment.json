@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Treatment",
+  "evaluation_time": "0.17 minutes",
+  "model_name": "medcpt",
+  "test": {
+    "map_at_1": 0.036,
+    "map_at_10": 0.05703,
+    "map_at_100": 0.06384,
+    "map_at_3": 0.04896,
+    "map_at_5": 0.05363,
+    "ndcg_at_1": 0.05333,
+    "ndcg_at_10": 0.07715,
+    "ndcg_at_100": 0.11939,
+    "ndcg_at_3": 0.0617,
+    "ndcg_at_5": 0.06867,
+    "precision_at_1": 0.05333,
+    "precision_at_10": 0.01733,
+    "precision_at_100": 0.00533,
+    "precision_at_3": 0.03556,
+    "precision_at_5": 0.02667,
+    "recall_at_1": 0.036,
+    "recall_at_10": 0.111,
+    "recall_at_100": 0.29456,
+    "recall_at_3": 0.06878,
+    "recall_at_5": 0.08878
+  }
+}

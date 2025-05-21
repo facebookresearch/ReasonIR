@@ -1,7 +1,9 @@
 {
   "dataset_name": "MedXpertQA-Exam",
   "evaluation_time": "0.36 minutes",
-  "model_name": "bm25",
+  "gar_llm": "qwen-32b",
+  "gar_method": "hyde",
+  "retriever_name": "bm25",
   "test": {
     "MAP@1": 0.06755,
     "MAP@10": 0.12043,

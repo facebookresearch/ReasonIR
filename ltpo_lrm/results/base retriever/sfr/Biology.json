@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "18.35 minutes",
+  "model_name": "sfr",
+  "test": {
+    "map_at_1": 0.05708,
+    "map_at_10": 0.13701,
+    "map_at_100": 0.16834,
+    "map_at_3": 0.09796,
+    "map_at_5": 0.12197,
+    "ndcg_at_1": 0.20388,
+    "ndcg_at_10": 0.19562,
+    "ndcg_at_100": 0.30364,
+    "ndcg_at_3": 0.17239,
+    "ndcg_at_5": 0.18115,
+    "precision_at_1": 0.20388,
+    "precision_at_10": 0.09126,
+    "precision_at_100": 0.02262,
+    "precision_at_3": 0.14887,
+    "precision_at_5": 0.13398,
+    "recall_at_1": 0.05708,
+    "recall_at_10": 0.22458,
+    "recall_at_100": 0.59934,
+    "recall_at_3": 0.11926,
+    "recall_at_5": 0.1711
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "18.36 minutes",
+  "model_name": "e5",
+  "test": {
+    "map_at_1": 0.06345,
+    "map_at_10": 0.12852,
+    "map_at_100": 0.15623,
+    "map_at_3": 0.08724,
+    "map_at_5": 0.10877,
+    "ndcg_at_1": 0.19417,
+    "ndcg_at_10": 0.18812,
+    "ndcg_at_100": 0.29029,
+    "ndcg_at_3": 0.15121,
+    "ndcg_at_5": 0.16332,
+    "precision_at_1": 0.19417,
+    "precision_at_10": 0.08738,
+    "precision_at_100": 0.02184,
+    "precision_at_3": 0.12298,
+    "precision_at_5": 0.11456,
+    "recall_at_1": 0.06345,
+    "recall_at_10": 0.2157,
+    "recall_at_100": 0.57376,
+    "recall_at_3": 0.10289,
+    "recall_at_5": 0.14873
+  }
+}

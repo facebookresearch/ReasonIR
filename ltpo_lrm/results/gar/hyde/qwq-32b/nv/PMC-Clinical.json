@@ -1,0 +1,33 @@
+{
+  "dataset_name": "PMC-Clinical",
+  "evaluation_time": "0.28 minutes",
+  "gar_llm": "qwq-32b",
+  "gar_method": "hyde",
+  "retriever_name": "nv",
+  "test": {
+    "map_at_1": 0.17836,
+    "map_at_10": 0.32917,
+    "map_at_100": 0.35243,
+    "map_at_1000": 0.35343,
+    "map_at_3": 0.27607,
+    "map_at_5": 0.30674,
+    "ndcg_at_1": 0.33333,
+    "ndcg_at_10": 0.41062,
+    "ndcg_at_100": 0.49149,
+    "ndcg_at_1000": 0.51329,
+    "ndcg_at_3": 0.33469,
+    "ndcg_at_5": 0.36753,
+    "precision_at_1": 0.33333,
+    "precision_at_10": 0.10965,
+    "precision_at_100": 0.01746,
+    "precision_at_1000": 0.00209,
+    "precision_at_3": 0.23099,
+    "precision_at_5": 0.16842,
+    "recall_at_1": 0.17836,
+    "recall_at_10": 0.52193,
+    "recall_at_100": 0.82675,
+    "recall_at_1000": 0.96345,
+    "recall_at_3": 0.34357,
+    "recall_at_5": 0.42398
+  }
+}

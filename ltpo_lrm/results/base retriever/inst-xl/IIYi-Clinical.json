@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYi-Clinical",
+  "evaluation_time": "4.15 minutes",
+  "model_name": "inst-xl",
+  "test": {
+    "map_at_1": 0.03475,
+    "map_at_10": 0.09453,
+    "map_at_100": 0.12336,
+    "map_at_3": 0.06645,
+    "map_at_5": 0.07947,
+    "ndcg_at_1": 0.13178,
+    "ndcg_at_10": 0.16166,
+    "ndcg_at_100": 0.27704,
+    "ndcg_at_3": 0.12053,
+    "ndcg_at_5": 0.13035,
+    "precision_at_1": 0.13178,
+    "precision_at_10": 0.07442,
+    "precision_at_100": 0.02178,
+    "precision_at_3": 0.10853,
+    "precision_at_5": 0.09612,
+    "recall_at_1": 0.03475,
+    "recall_at_10": 0.20504,
+    "recall_at_100": 0.5876,
+    "recall_at_3": 0.09199,
+    "recall_at_5": 0.13475
+  }
+}

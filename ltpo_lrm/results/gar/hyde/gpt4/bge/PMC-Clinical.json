@@ -1,0 +1,29 @@
+{
+  "dataset_name": "PMC-Clinical",
+  "evaluation_time": "1.5 minutes",
+  "gar_llm": "gpt4",
+  "gar_method": "hyde",
+  "retriever_name": "bge",
+  "test": {
+    "map_at_1": 0.0848,
+    "map_at_10": 0.16368,
+    "map_at_100": 0.18435,
+    "map_at_3": 0.11988,
+    "map_at_5": 0.14459,
+    "ndcg_at_1": 0.18421,
+    "ndcg_at_10": 0.23283,
+    "ndcg_at_100": 0.31751,
+    "ndcg_at_3": 0.15815,
+    "ndcg_at_5": 0.19483,
+    "precision_at_1": 0.18421,
+    "precision_at_10": 0.07105,
+    "precision_at_100": 0.01447,
+    "precision_at_3": 0.10819,
+    "precision_at_5": 0.09825,
+    "recall_at_1": 0.0848,
+    "recall_at_10": 0.32456,
+    "recall_at_100": 0.65351,
+    "recall_at_3": 0.15497,
+    "recall_at_5": 0.23392
+  }
+}

@@ -1,7 +1,9 @@
 {
   "dataset_name": "MedXpertQA-Exam",
   "evaluation_time": "0.37 minutes",
-  "model_name": "bm25",
+  "gar_llm": "qwen-72b",
+  "gar_method": "query2doc",
+  "retriever_name": "bm25",
   "test": {
     "MAP@1": 0.04917,
     "MAP@10": 0.10656,

@@ -1,7 +1,9 @@
 {
   "dataset_name": "MedXpertQA-Exam",
   "evaluation_time": "1.09 minutes",
-  "model_name": "bge",
+  "gar_llm": "qwen-7b",
+  "gar_method": "hyde",
+  "retriever_name": "bge",
   "test": {
     "map_at_1": 0.05216,
     "map_at_10": 0.09083,

@@ -1,0 +1,29 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "0.34 minutes",
+  "gar_llm": "qwen-72b",
+  "gar_method": "hyde",
+  "retriever_name": "nv",
+  "test": {
+    "map_at_1": 0.23629,
+    "map_at_10": 0.4449,
+    "map_at_100": 0.47624,
+    "map_at_3": 0.35745,
+    "map_at_5": 0.41486,
+    "ndcg_at_1": 0.46753,
+    "ndcg_at_10": 0.54426,
+    "ndcg_at_100": 0.62187,
+    "ndcg_at_3": 0.47105,
+    "ndcg_at_5": 0.51513,
+    "precision_at_1": 0.46753,
+    "precision_at_10": 0.16623,
+    "precision_at_100": 0.02675,
+    "precision_at_3": 0.31602,
+    "precision_at_5": 0.26234,
+    "recall_at_1": 0.23629,
+    "recall_at_10": 0.67129,
+    "recall_at_100": 0.90314,
+    "recall_at_3": 0.43621,
+    "recall_at_5": 0.58378
+  }
+}

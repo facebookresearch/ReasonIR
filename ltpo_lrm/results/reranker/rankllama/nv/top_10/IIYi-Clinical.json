@@ -1,0 +1,30 @@
+{
+  "dataset_name": "IIYi-Clinical",
+  "evaluation_time": "2.1 minutes",
+  "reranker_name": "rankllama",
+  "retriever_name": "nv",
+  "test": {
+    "MAP@1": 0.03656,
+    "MAP@10": 0.08054,
+    "MAP@100": 0.08054,
+    "MAP@25": 0.08054,
+    "MAP@50": 0.08054,
+    "MRR": 0.18854,
+    "NDCG@1": 0.11628,
+    "NDCG@10": 0.13637,
+    "NDCG@100": 0.13637,
+    "NDCG@25": 0.13637,
+    "NDCG@50": 0.13637,
+    "P@1": 0.11628,
+    "P@10": 0.06279,
+    "P@100": 0.00628,
+    "P@25": 0.02512,
+    "P@50": 0.01256,
+    "Recall@1": 0.03656,
+    "Recall@10": 0.1832,
+    "Recall@100": 0.1832,
+    "Recall@25": 0.1832,
+    "Recall@50": 0.1832
+  },
+  "topk": 10
+}

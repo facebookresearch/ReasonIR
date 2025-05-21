@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "11.89 minutes",
+  "model_name": "voyage",
+  "test": {
+    "map_at_1": 0.07208,
+    "map_at_10": 0.18066,
+    "map_at_100": 0.21012,
+    "map_at_3": 0.12903,
+    "map_at_5": 0.16261,
+    "ndcg_at_1": 0.25243,
+    "ndcg_at_10": 0.25422,
+    "ndcg_at_100": 0.35878,
+    "ndcg_at_3": 0.23332,
+    "ndcg_at_5": 0.24187,
+    "precision_at_1": 0.25243,
+    "precision_at_10": 0.11262,
+    "precision_at_100": 0.02437,
+    "precision_at_3": 0.20712,
+    "precision_at_5": 0.17864,
+    "recall_at_1": 0.07208,
+    "recall_at_10": 0.29073,
+    "recall_at_100": 0.65754,
+    "recall_at_3": 0.15908,
+    "recall_at_5": 0.22731
+  }
+}
