@@ -137,10 +137,10 @@ class CustomModel:
 
 If this code or dataset contributes to your research, please kindly consider citing our paper and give this repo ⭐️ :)
 ```
-@article{xxx,
+@article{li2025r2med,
   title={R2MED: A Benchmark for Reasoning-Driven Medical Retrieval},
-  author={ Lei Li, Xiao Zhou, and Zheng Liu},
-  journal={arXiv preprint arXiv:xxxx},
+  author={Li, Lei and Zhou, Xiao and Liu, Zheng},
+  journal={arXiv preprint arXiv:2505.14558},
   year={2025}
 }
 ```
