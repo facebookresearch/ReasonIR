@@ -57,6 +57,7 @@ LAUNCHER="accelerate launch \
 
 TRAIN_DATA=data/ # replace with the directory of your training data
 
+# please refer to https://github.com/ContextualAI/gritlm/blob/main/gritlm/training/run.py for training scripts (e.g., run.py)
 export CMD=" \
     -m training.run \
     --output_dir checkpoints/$(date "+%Y-%m-%d-%H_%M_%S")/ \
