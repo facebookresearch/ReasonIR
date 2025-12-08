@@ -14,17 +14,11 @@ module load 2025
 module load CUDA/12.6.0
 module load Anaconda3/2025.06-1
 
-source activate ir2
+source activate tevatron
 
 cd /home/scur1731/tevatron
 
-pip install transformers datasets peft
-pip install deepspeed accelerate
 pip install -e .
-
-pip install tensorboard
-pip install qwen-omni-utils
-pip install torchvision
 
 cd /home/scur1731/ReasonIR/models/RetroMAE
 

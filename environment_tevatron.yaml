@@ -1,0 +1,14 @@
+name: tevatron
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - faiss-cpu
+  - pip:
+      - transformers-
+      - datasets
+      - peft
+      - hf_transfer
+      - tensorboard
