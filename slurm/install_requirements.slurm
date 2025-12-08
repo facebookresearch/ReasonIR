@@ -12,5 +12,4 @@ module purge
 module load 2025
 module load Anaconda3/2025.06-1
 
-source .venv/bin/activate
-uv pip install -r evaluation/bright/requirements.txt
+conda env create -f environment.yaml
