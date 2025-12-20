@@ -1,0 +1,24 @@
+name: ir2
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - faiss-gpu
+  - pip:
+    - bitsandbytes
+    - pytrec-eval
+    - tqdm
+    - transformers==4.47.0
+    - tiktoken
+    - scipy
+    - torchmetrics
+    - pyserini
+    - gensim
+    - einops
+    - fasttext
+    - nltk
+    - sentence-transformers
+    - hf_transfer
+    - FlagEmbedding

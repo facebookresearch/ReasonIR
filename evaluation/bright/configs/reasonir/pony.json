@@ -1,0 +1,10 @@
+{
+  "instructions": {
+    "query": "<|user|>\nGiven a {task} question, retrieve relevant passages that help answer the question\n<|embed|>\n",
+    "document": "<|embed|>\n"
+  },
+  "instructions_long": {
+    "query": "<|user|>\nGiven a {task} question, retrieve relevant documents that help answer the question\n<|embed|>\n",
+    "document": "<|embed|>\n"
+  }
+}

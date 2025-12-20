@@ -1,0 +1,20 @@
+bitsandbytes
+pytrec-eval
+tqdm
+transformers==4.47.0
+tiktoken
+scipy
+torchmetrics
+pyserini
+gensim
+einops
+vllm
+fasttext
+nltk
+sentence-transformers
+hf_transfer
+# cohere==4.36
+# voyageai
+# vertexai
+# openai
+# gritlm
