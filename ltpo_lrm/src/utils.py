@@ -397,8 +397,8 @@ class HighScaleModel:
             cache_path: str = "",
     ) -> None:
 
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-        self.model = AutoModel.from_pretrained(model_name_or_path,device_map="auto")
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
+        self.model = AutoModel.from_pretrained(model_name_or_path, device_map="auto", trust_remote_code=True, torch_dtype="auto")
         if encode_mode == "BMR":
             if self.tokenizer.pad_token is None:
                 self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -486,6 +486,9 @@ class HighScaleModel:
                 if self.normalize_embeddings:
                     embeddings = torch.nn.functional.normalize(embeddings, dim=-1)
                 embeddings = cast(torch.Tensor, embeddings)
+                # Convert bfloat16 to float32 before numpy conversion
+                if embeddings.dtype == torch.bfloat16:
+                    embeddings = embeddings.float()
                 all_embeddings.append(embeddings.cpu().numpy())
             return np.concatenate(all_embeddings, axis=0)
         elif self.encode_mode == "BMR":
@@ -509,6 +512,9 @@ class HighScaleModel:
                     outputs = self.model(**batch_dict)
                     embeddings = self.pooling(outputs.last_hidden_state, batch_dict['attention_mask'])
                     embeddings = cast(torch.Tensor, embeddings)
+                    # Convert bfloat16 to float32 before numpy conversion
+                    if embeddings.dtype == torch.bfloat16:
+                        embeddings = embeddings.float()
                     all_embeddings.append(embeddings.cpu().numpy())
             return np.concatenate(all_embeddings, axis=0)
 
@@ -807,6 +813,102 @@ class RetrievalOPENAI:
             if cur_emb is not None:
                 all_embeddings.append(cur_emb)
         return np.concatenate(all_embeddings, axis=0)
+
+class ReasonIRModel:
+    def __init__(
+            self,
+            model_name_or_path: str = None,
+            query_instruction_for_retrieval: str = "",
+            document_instruction_for_retrieval: str = "",
+            batch_size: int = 16,
+            max_length: int = 8192,
+            cache_path: str = "",
+    ) -> None:
+        from transformers import AutoModel, AutoTokenizer
+        import torch
+        
+        self.model = AutoModel.from_pretrained(
+            model_name_or_path,
+            trust_remote_code=True,
+            torch_dtype="auto",
+            device_map="auto"
+        )
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
+        self.query_instruction_for_retrieval = query_instruction_for_retrieval
+        self.document_instruction_for_retrieval = document_instruction_for_retrieval
+        self.batch_size = batch_size
+        self.max_length = max_length
+        self.cache_path = cache_path
+        
+        if torch.cuda.is_available():
+            self.device = torch.device("cuda")
+        else:
+            self.device = torch.device("cpu")
+        
+        self.model.eval()
+
+    def encode_queries(self, queries: List[str], **kwargs) -> np.ndarray:
+        print(f"# Instruction for query is : {self.query_instruction_for_retrieval}")
+        if isinstance(queries[0], str):
+            print(f">>>> Encoding Queries <<<<")
+            return self.encode(queries, instruction=self.query_instruction_for_retrieval)
+        else:
+            queries_base = [q[0] for q in queries]
+            print(f">>>> Encoding Queries <<<<")
+            emb_base = self.encode(queries_base, instruction=self.query_instruction_for_retrieval)
+            print(f">>>> Encoding Rewrite Queries <<<<")
+            queries_rewrite = [q[1] for q in queries]
+            emb_rewrite = self.encode(queries_rewrite, instruction=self.query_instruction_for_retrieval)
+            emb_final = (emb_base + emb_rewrite) / 2
+            return emb_final
+
+    def encode_corpus(self, corpus: List[Union[Dict[str, str], str]], **kwargs) -> np.ndarray:
+        print(f"# Instruction for doc is : {self.document_instruction_for_retrieval}")
+        print(f">>>> Encoding Documents <<<<")
+        if os.path.isfile(self.cache_path):
+            print(f">>Document embedding already exists so we can just load it!")
+            doc_embeddings = np.load(self.cache_path, allow_pickle=True)
+            return doc_embeddings
+        if isinstance(corpus[0], dict):
+            input_texts = [doc['text'] for doc in corpus]
+        else:
+            input_texts = corpus
+        doc_embeddings = self.encode(input_texts, instruction=self.document_instruction_for_retrieval)
+        np.save(self.cache_path, doc_embeddings)
+        return doc_embeddings
+
+    @torch.no_grad()
+    def encode(self, sentences: List[str], instruction: str = "", **kwargs) -> np.ndarray:
+        instruction = instruction or ""
+        self.model.eval()
+        all_embeddings = []
+        for start_index in tqdm(range(0, len(sentences), self.batch_size), desc="Batches", disable=len(sentences) < self.batch_size):
+            sentences_batch = sentences[start_index:start_index + self.batch_size]
+            if instruction:
+                sentences_batch = [f"{instruction}{s}" for s in sentences_batch]
+            inputs = self.tokenizer(
+                sentences_batch,
+                padding=True,
+                truncation=True,
+                return_tensors='pt',
+                max_length=self.max_length,
+            ).to(self.device)
+            outputs = self.model(**inputs, return_dict=True)
+            last_hidden_state = outputs.last_hidden_state
+            embeddings = self._mean_pool(last_hidden_state, inputs["attention_mask"])
+            embeddings = torch.nn.functional.normalize(embeddings, dim=-1)
+            if embeddings.dtype == torch.bfloat16:
+                embeddings = embeddings.float()
+            all_embeddings.append(embeddings.cpu().numpy())
+        return np.concatenate(all_embeddings, axis=0)
+
+    def _mean_pool(self, last_hidden_state: torch.Tensor, attention_mask: torch.Tensor) -> torch.Tensor:
+        """Mean-pool token embeddings using attention mask."""
+        mask = attention_mask.unsqueeze(-1).expand(last_hidden_state.size()).float()
+        masked_embeddings = last_hidden_state * mask
+        summed = masked_embeddings.sum(dim=1)
+        counts = mask.sum(dim=1).clamp(min=1e-9)
+        return summed / counts
 
 class RerankerModel:
     def __init__(

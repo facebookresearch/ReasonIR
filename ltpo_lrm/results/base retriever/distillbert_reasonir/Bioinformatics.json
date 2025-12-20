@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "0.58 minutes",
+  "model_name": "distillbert_reasonir",
+  "test": {
+    "map_at_1": 0.0211,
+    "map_at_10": 0.04838,
+    "map_at_100": 0.06655,
+    "map_at_3": 0.03626,
+    "map_at_5": 0.04318,
+    "ndcg_at_1": 0.03896,
+    "ndcg_at_10": 0.07694,
+    "ndcg_at_100": 0.15637,
+    "ndcg_at_3": 0.05193,
+    "ndcg_at_5": 0.06269,
+    "precision_at_1": 0.03896,
+    "precision_at_10": 0.02727,
+    "precision_at_100": 0.01156,
+    "precision_at_3": 0.03463,
+    "precision_at_5": 0.03117,
+    "recall_at_1": 0.0211,
+    "recall_at_10": 0.11906,
+    "recall_at_100": 0.39714,
+    "recall_at_3": 0.05195,
+    "recall_at_5": 0.08009
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "1.03 minutes",
+  "model_name": "contriever_reasonir",
+  "test": {
+    "map_at_1": 0.04491,
+    "map_at_10": 0.10424,
+    "map_at_100": 0.12145,
+    "map_at_3": 0.07602,
+    "map_at_5": 0.08784,
+    "ndcg_at_1": 0.1039,
+    "ndcg_at_10": 0.1581,
+    "ndcg_at_100": 0.24122,
+    "ndcg_at_3": 0.11037,
+    "ndcg_at_5": 0.128,
+    "precision_at_1": 0.1039,
+    "precision_at_10": 0.05584,
+    "precision_at_100": 0.01481,
+    "precision_at_3": 0.08225,
+    "precision_at_5": 0.07273,
+    "recall_at_1": 0.04491,
+    "recall_at_10": 0.22752,
+    "recall_at_100": 0.5442,
+    "recall_at_3": 0.10359,
+    "recall_at_5": 0.1511
+  }
+}

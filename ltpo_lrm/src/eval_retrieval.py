@@ -4,7 +4,7 @@ from collections import defaultdict
 import json
 from mteb.abstasks.AbsTaskRetrieval import DRESModel
 DRES_METHODS = ["encode_queries", "encode_corpus"]
-from utils import FlagDRESModel, InstructorModel, BiEncoderModel, HighScaleModel, GritModel, NVEmbedModel, RetrievalOPENAI
+from utils import FlagDRESModel, InstructorModel, BiEncoderModel, HighScaleModel, GritModel, NVEmbedModel, RetrievalOPENAI, ReasonIRModel
 from instrcution import *
 from tqdm import tqdm
 from base import split_response_for_r1, r1_model_list, writejson_bench
@@ -119,11 +119,11 @@ def retrieval_by_dense(
 
 
 def init_model(retriever_name, retrieral_model_path):
-    if retriever_name in ["contriever"]:
-        retrieval_model = FlagDRESModel(model_name_or_path=retrieral_model_path,
-                                        pooling_method="mean",
-                                        normalize_embeddings=False)
-    elif retriever_name in ["inst-l", "inst-xl"]:
+    # if retriever_name in ["contriever"]:
+    #     retrieval_model = FlagDRESModel(model_name_or_path=retrieral_model_path,
+    #                                     pooling_method="mean",
+    #                                     normalize_embeddings=False)
+    if retriever_name in ["inst-l", "inst-xl"]:
         retrieval_model = InstructorModel(model_name_or_path=retrieral_model_path,
                                       query_instruction_for_retrieval="",
                                       document_instruction_for_retrieval="",
@@ -134,11 +134,11 @@ def init_model(retriever_name, retrieral_model_path):
                                         pooling_method='last',
                                         max_length=2048,
                                         batch_size=32)
-    elif retriever_name in ["bge"]:
-        retrieval_model = FlagDRESModel(model_name_or_path=retrieral_model_path,
-                                  query_instruction_for_retrieval=query_instruction[retriever_name],
-                                  pooling_method='cls',
-                                  max_length=512)
+    # elif retriever_name in ["bge"]:
+    #     retrieval_model = FlagDRESModel(model_name_or_path=retrieral_model_path,
+    #                               query_instruction_for_retrieval=query_instruction[retriever_name],
+    #                               pooling_method='cls',
+    #                               max_length=512)
     elif retriever_name in ["bmr-410m", "bmr-2b"]:
         MAX_LENGTH = {"bmr-410m":512, "bmr-2b":1024}
         retrieval_model = FlagDRESModel(model_name_or_path=retrieral_model_path,
@@ -174,6 +174,19 @@ def init_model(retriever_name, retrieral_model_path):
                                     max_length=4096)
     elif retriever_name in ["openai", "voyage"]:
         retrieval_model = RetrievalOPENAI(model_name_or_path=retrieral_model_path, batch_size=64)
+    elif retriever_name in ["reasonir", "bge_reasonir", "bge"]:
+        retrieval_model = ReasonIRModel(model_name_or_path=retrieral_model_path,
+                                       query_instruction_for_retrieval="",
+                                       document_instruction_for_retrieval="",
+                                       max_length=8192,
+                                       batch_size=16)
+
+    elif retriever_name in ["distillbert_reasonir", "retromae_reasonir", "distillbert", "retromae", "contriever_reasonir", "contriever"]:
+        retrieval_model = ReasonIRModel(model_name_or_path=retrieral_model_path,
+                                       query_instruction_for_retrieval="",
+                                       document_instruction_for_retrieval="",
+                                       max_length=512,
+                                       batch_size=16)
     else:
         print(f"Please print a valid model name!")
         return None
@@ -197,8 +210,17 @@ def eval_retrieval(retriever_name="", gar_method="", gar_llm="", task_names=[""]
         "e5": "model_dir/intfloat/e5-mistral-7b-instruct",
         "grit": "model_dir/GritLM/GritLM-7B",
         "sfr": "model_dir/Salesforce/SFR-Embedding-Mistral",
+        "reasonir": "reasonir/ReasonIR-8B",
+        "distillbert_reasonir": "lyadalachanchu/final-distillbert",
+        "retromae_reasonir": "cmpatino/RetroMAE_ReasonIR",
+        "distillbert": "sebastian-hofstaetter/distilbert-dot-tas_b-b256-msmarco",
+        "retromae": "Shitao/RetroMAE_MSMARCO_finetune",
         "nv": "model_dir/nvidia/NV-Embed-v2",
         "openai": "text-embedding-3-large",
+        "contriever_reasonir": "KrystofBo/ReasonIR-Contriever",
+        "contriever": "facebook/contriever-msmarco",
+        "bge": "BAAI/bge-m3",
+        "bge_reasonir": "KrystofBo/ReasonIR-BGE",
         "voyage": "voyage-3",
     }
 

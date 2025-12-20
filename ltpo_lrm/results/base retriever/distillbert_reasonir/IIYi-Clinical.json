@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYi-Clinical",
+  "evaluation_time": "0.32 minutes",
+  "model_name": "distillbert_reasonir",
+  "test": {
+    "map_at_1": 0.04638,
+    "map_at_10": 0.0717,
+    "map_at_100": 0.08457,
+    "map_at_3": 0.06008,
+    "map_at_5": 0.06417,
+    "ndcg_at_1": 0.13953,
+    "ndcg_at_10": 0.11217,
+    "ndcg_at_100": 0.18924,
+    "ndcg_at_3": 0.09769,
+    "ndcg_at_5": 0.09405,
+    "precision_at_1": 0.13953,
+    "precision_at_10": 0.03953,
+    "precision_at_100": 0.0145,
+    "precision_at_3": 0.07235,
+    "precision_at_5": 0.05116,
+    "recall_at_1": 0.04638,
+    "recall_at_10": 0.12933,
+    "recall_at_100": 0.3969,
+    "recall_at_3": 0.07765,
+    "recall_at_5": 0.0876
+  }
+}

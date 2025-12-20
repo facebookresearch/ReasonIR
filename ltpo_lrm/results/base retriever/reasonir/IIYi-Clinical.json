@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYi-Clinical",
+  "evaluation_time": "2.77 minutes",
+  "model_name": "reasonir",
+  "test": {
+    "map_at_1": 0.03398,
+    "map_at_10": 0.10735,
+    "map_at_100": 0.14174,
+    "map_at_3": 0.07412,
+    "map_at_5": 0.08817,
+    "ndcg_at_1": 0.14729,
+    "ndcg_at_10": 0.18622,
+    "ndcg_at_100": 0.31473,
+    "ndcg_at_3": 0.14591,
+    "ndcg_at_5": 0.14742,
+    "precision_at_1": 0.14729,
+    "precision_at_10": 0.08217,
+    "precision_at_100": 0.02411,
+    "precision_at_3": 0.13178,
+    "precision_at_5": 0.10388,
+    "recall_at_1": 0.03398,
+    "recall_at_10": 0.25491,
+    "recall_at_100": 0.67054,
+    "recall_at_3": 0.11434,
+    "recall_at_5": 0.15853
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "1.03 minutes",
+  "model_name": "retromae_reasonir",
+  "test": {
+    "map_at_1": 0.02219,
+    "map_at_10": 0.05666,
+    "map_at_100": 0.06982,
+    "map_at_3": 0.04686,
+    "map_at_5": 0.04686,
+    "ndcg_at_1": 0.06494,
+    "ndcg_at_10": 0.08929,
+    "ndcg_at_100": 0.15869,
+    "ndcg_at_3": 0.06902,
+    "ndcg_at_5": 0.06495,
+    "precision_at_1": 0.06494,
+    "precision_at_10": 0.02857,
+    "precision_at_100": 0.01117,
+    "precision_at_3": 0.05195,
+    "precision_at_5": 0.03117,
+    "recall_at_1": 0.02219,
+    "recall_at_10": 0.13788,
+    "recall_at_100": 0.39253,
+    "recall_at_3": 0.07348,
+    "recall_at_5": 0.07348
+  }
+}

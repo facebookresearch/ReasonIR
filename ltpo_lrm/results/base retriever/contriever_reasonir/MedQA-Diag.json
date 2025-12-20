@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "1.46 minutes",
+  "model_name": "contriever_reasonir",
+  "test": {
+    "map_at_1": 0.0,
+    "map_at_10": 0.01034,
+    "map_at_100": 0.01504,
+    "map_at_3": 0.0053,
+    "map_at_5": 0.00745,
+    "ndcg_at_1": 0.0,
+    "ndcg_at_10": 0.0187,
+    "ndcg_at_100": 0.05152,
+    "ndcg_at_3": 0.01081,
+    "ndcg_at_5": 0.01336,
+    "precision_at_1": 0.0,
+    "precision_at_10": 0.01102,
+    "precision_at_100": 0.00534,
+    "precision_at_3": 0.0113,
+    "precision_at_5": 0.01186,
+    "recall_at_1": 0.0,
+    "recall_at_10": 0.02657,
+    "recall_at_100": 0.14335,
+    "recall_at_3": 0.01059,
+    "recall_at_5": 0.01604
+  }
+}

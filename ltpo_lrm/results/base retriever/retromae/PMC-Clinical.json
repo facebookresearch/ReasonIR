@@ -1,0 +1,27 @@
+{
+  "dataset_name": "PMC-Clinical",
+  "evaluation_time": "2.8 minutes",
+  "model_name": "retromae",
+  "test": {
+    "map_at_1": 0.01243,
+    "map_at_10": 0.02638,
+    "map_at_100": 0.03067,
+    "map_at_3": 0.0212,
+    "map_at_5": 0.02463,
+    "ndcg_at_1": 0.03509,
+    "ndcg_at_10": 0.04316,
+    "ndcg_at_100": 0.07605,
+    "ndcg_at_3": 0.03115,
+    "ndcg_at_5": 0.03852,
+    "precision_at_1": 0.03509,
+    "precision_at_10": 0.01316,
+    "precision_at_100": 0.0043,
+    "precision_at_3": 0.02339,
+    "precision_at_5": 0.02105,
+    "recall_at_1": 0.01243,
+    "recall_at_10": 0.05921,
+    "recall_at_100": 0.20468,
+    "recall_at_3": 0.03143,
+    "recall_at_5": 0.04751
+  }
+}

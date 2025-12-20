@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "1.46 minutes",
+  "model_name": "retromae_reasonir",
+  "test": {
+    "map_at_1": 0.00169,
+    "map_at_10": 0.0051,
+    "map_at_100": 0.00803,
+    "map_at_3": 0.00169,
+    "map_at_5": 0.00412,
+    "ndcg_at_1": 0.00847,
+    "ndcg_at_10": 0.01141,
+    "ndcg_at_100": 0.03196,
+    "ndcg_at_3": 0.00398,
+    "ndcg_at_5": 0.00859,
+    "precision_at_1": 0.00847,
+    "precision_at_10": 0.00593,
+    "precision_at_100": 0.00364,
+    "precision_at_3": 0.00282,
+    "precision_at_5": 0.00678,
+    "recall_at_1": 0.00169,
+    "recall_at_10": 0.01774,
+    "recall_at_100": 0.08449,
+    "recall_at_3": 0.00169,
+    "recall_at_5": 0.01138
+  }
+}

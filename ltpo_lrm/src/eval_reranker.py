@@ -2,7 +2,8 @@ import json
 import pytrec_eval
 from collections import defaultdict
 import os
-from utils import RerankerModel, RerankerGPT
+from utils import RerankerModel
+# RerankerGPT not implemented yet
 from time import time
 from tqdm import tqdm
 

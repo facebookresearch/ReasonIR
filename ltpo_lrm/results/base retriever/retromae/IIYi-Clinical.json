@@ -1,0 +1,27 @@
+{
+  "dataset_name": "IIYi-Clinical",
+  "evaluation_time": "0.54 minutes",
+  "model_name": "retromae",
+  "test": {
+    "map_at_1": 0.02209,
+    "map_at_10": 0.05175,
+    "map_at_100": 0.06375,
+    "map_at_3": 0.0404,
+    "map_at_5": 0.04702,
+    "ndcg_at_1": 0.07752,
+    "ndcg_at_10": 0.08573,
+    "ndcg_at_100": 0.15284,
+    "ndcg_at_3": 0.06847,
+    "ndcg_at_5": 0.07322,
+    "precision_at_1": 0.07752,
+    "precision_at_10": 0.03333,
+    "precision_at_100": 0.01194,
+    "precision_at_3": 0.05426,
+    "precision_at_5": 0.04651,
+    "recall_at_1": 0.02209,
+    "recall_at_10": 0.10801,
+    "recall_at_100": 0.33902,
+    "recall_at_3": 0.05995,
+    "recall_at_5": 0.08062
+  }
+}

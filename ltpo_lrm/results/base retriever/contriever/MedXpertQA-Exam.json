@@ -1,6 +1,6 @@
 {
   "dataset_name": "MedXpertQA-Exam",
-  "evaluation_time": "0.55 minutes",
+  "evaluation_time": "1.38 minutes",
   "model_name": "contriever",
   "test": {
     "map_at_1": 0.00344,

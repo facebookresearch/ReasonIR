@@ -15,8 +15,8 @@ if __name__=='__main__':
                   'MedQA-Diag', "PMC-Treatment", "PMC-Clinical", "IIYi-Clinical", "All"])
     parser.add_argument('--retriever_name', type=str, required=True,
                         choices=['bm25', 'contriever', 'medcpt', 'inst-l', 'inst-xl', 'bmr-410m', 'bmr-2b',
-                                 'bmr-7b', 'bge', 'e5', 'grit', 'sfr', 'voyage', 'openai', 'voyage'])
-    parser.add_argument('--reranker_name', type=str, required=True,
+                                 'bmr-7b', 'e5', 'grit', 'sfr', 'voyage', 'openai', 'reasonir', 'distillbert_reasonir', 'retromae_reasonir', 'distillbert', 'retromae', 'contriever_reasonir', 'contriever', 'bge', 'bge_reasonir'])
+    parser.add_argument('--reranker_name', type=str, required=False, default=None,
                         choices=["bge-reranker", "monobert", "rankllama"])
     parser.add_argument('--recall_k', type=int, default=10, choices=[10, 100])
     parser.add_argument('--gar_method', type=str, default="",
@@ -25,6 +25,11 @@ if __name__=='__main__':
                         choices=['qwen-7b','qwen-32b','qwen-72b','llama-70b','r1-qwen-32b','r1-llama-70b',
                                  'huatuo-o1-70b','qwq-32b','qwen3-32b','gpt4','o3-mini'])
     args = parser.parse_args()
+    
+    # Validate that reranker_name is provided when mode is eval_reranker
+    if args.mode == "eval_reranker" and args.reranker_name is None:
+        parser.error("--reranker_name is required when mode is 'eval_reranker'")
+    
     if args.task == "All":
         args.task = ["Biology", "Bioinformatics", "Medical-Sciences", "MedXpertQA-Exam",
                   'MedQA-Diag', "PMC-Treatment", "PMC-Clinical", "IIYi-Clinical"]

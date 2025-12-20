@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Bioinformatics",
+  "evaluation_time": "5.11 minutes",
+  "model_name": "reasonir",
+  "test": {
+    "map_at_1": 0.17447,
+    "map_at_10": 0.31485,
+    "map_at_100": 0.34642,
+    "map_at_3": 0.23075,
+    "map_at_5": 0.26902,
+    "ndcg_at_1": 0.28571,
+    "ndcg_at_10": 0.4061,
+    "ndcg_at_100": 0.50089,
+    "ndcg_at_3": 0.2966,
+    "ndcg_at_5": 0.33763,
+    "precision_at_1": 0.28571,
+    "precision_at_10": 0.13896,
+    "precision_at_100": 0.02506,
+    "precision_at_3": 0.19048,
+    "precision_at_5": 0.17143,
+    "recall_at_1": 0.17447,
+    "recall_at_10": 0.55213,
+    "recall_at_100": 0.86263,
+    "recall_at_3": 0.27254,
+    "recall_at_5": 0.3795
+  }
+}

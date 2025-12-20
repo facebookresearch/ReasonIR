@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedQA-Diag",
+  "evaluation_time": "1.47 minutes",
+  "model_name": "retromae",
+  "test": {
+    "map_at_1": 0.0,
+    "map_at_10": 0.00187,
+    "map_at_100": 0.00391,
+    "map_at_3": 0.00056,
+    "map_at_5": 0.00099,
+    "ndcg_at_1": 0.0,
+    "ndcg_at_10": 0.00549,
+    "ndcg_at_100": 0.02037,
+    "ndcg_at_3": 0.00199,
+    "ndcg_at_5": 0.00267,
+    "precision_at_1": 0.0,
+    "precision_at_10": 0.00339,
+    "precision_at_100": 0.00254,
+    "precision_at_3": 0.00282,
+    "precision_at_5": 0.00339,
+    "recall_at_1": 0.0,
+    "recall_at_10": 0.00975,
+    "recall_at_100": 0.0602,
+    "recall_at_3": 0.00169,
+    "recall_at_5": 0.00339
+  }
+}

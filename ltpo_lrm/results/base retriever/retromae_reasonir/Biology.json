@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "0.73 minutes",
+  "model_name": "retromae_reasonir",
+  "test": {
+    "map_at_1": 0.01392,
+    "map_at_10": 0.04099,
+    "map_at_100": 0.05247,
+    "map_at_3": 0.02625,
+    "map_at_5": 0.03595,
+    "ndcg_at_1": 0.05825,
+    "ndcg_at_10": 0.07387,
+    "ndcg_at_100": 0.13298,
+    "ndcg_at_3": 0.05439,
+    "ndcg_at_5": 0.06654,
+    "precision_at_1": 0.05825,
+    "precision_at_10": 0.03592,
+    "precision_at_100": 0.01165,
+    "precision_at_3": 0.05178,
+    "precision_at_5": 0.05243,
+    "recall_at_1": 0.01392,
+    "recall_at_10": 0.09231,
+    "recall_at_100": 0.30093,
+    "recall_at_3": 0.04024,
+    "recall_at_5": 0.07075
+  }
+}

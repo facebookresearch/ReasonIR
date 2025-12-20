@@ -1,0 +1,27 @@
+{
+  "dataset_name": "MedXpertQA-Exam",
+  "evaluation_time": "1.38 minutes",
+  "model_name": "retromae_reasonir",
+  "test": {
+    "map_at_1": 0.00258,
+    "map_at_10": 0.00945,
+    "map_at_100": 0.01319,
+    "map_at_3": 0.00945,
+    "map_at_5": 0.00945,
+    "ndcg_at_1": 0.01031,
+    "ndcg_at_10": 0.01713,
+    "ndcg_at_100": 0.03653,
+    "ndcg_at_3": 0.01957,
+    "ndcg_at_5": 0.01758,
+    "precision_at_1": 0.01031,
+    "precision_at_10": 0.00619,
+    "precision_at_100": 0.00268,
+    "precision_at_3": 0.02062,
+    "precision_at_5": 0.01237,
+    "recall_at_1": 0.00258,
+    "recall_at_10": 0.01847,
+    "recall_at_100": 0.08628,
+    "recall_at_3": 0.01847,
+    "recall_at_5": 0.01847
+  }
+}

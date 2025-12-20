@@ -1,0 +1,27 @@
+{
+  "dataset_name": "Biology",
+  "evaluation_time": "3.38 minutes",
+  "model_name": "reasonir",
+  "test": {
+    "map_at_1": 0.04577,
+    "map_at_10": 0.12915,
+    "map_at_100": 0.15655,
+    "map_at_3": 0.09117,
+    "map_at_5": 0.10949,
+    "ndcg_at_1": 0.17476,
+    "ndcg_at_10": 0.19793,
+    "ndcg_at_100": 0.29557,
+    "ndcg_at_3": 0.16684,
+    "ndcg_at_5": 0.1744,
+    "precision_at_1": 0.17476,
+    "precision_at_10": 0.09029,
+    "precision_at_100": 0.02146,
+    "precision_at_3": 0.1521,
+    "precision_at_5": 0.12427,
+    "recall_at_1": 0.04577,
+    "recall_at_10": 0.24862,
+    "recall_at_100": 0.58146,
+    "recall_at_3": 0.12645,
+    "recall_at_5": 0.17455
+  }
+}
