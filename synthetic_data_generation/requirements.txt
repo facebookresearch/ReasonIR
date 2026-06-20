@@ -9,7 +9,7 @@ torchmetrics
 pyserini
 gensim
 einops
-vllm==0.6.3
+vllm==0.23.0
 fasttext
 nltk
 # cohere==4.36
